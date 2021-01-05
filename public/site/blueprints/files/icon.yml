@@ -1,0 +1,10 @@
+title: Icon
+
+accept:
+  mime: image/jpeg, image/png, image/gif
+  type: image
+
+# no additional infos
+fields:
+  hidden:
+    type: hidden

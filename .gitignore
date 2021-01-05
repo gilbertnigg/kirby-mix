@@ -1,0 +1,55 @@
+# Node files
+# ------------
+node_modules
+
+# Distributed files
+# ------------
+/public/assets/*
+
+# Kirby files
+# ------------
+
+/public/kirby/*
+/public/vendor/*
+
+# System files
+# ------------
+
+Icon
+.DS_Store
+
+# Temporary files
+# ---------------
+
+/public/media/*
+!/public/media/index.html
+
+# Lock files
+# ---------------
+.lock
+
+# -------------SECURITY-------------
+# NEVER publish these files via Git!
+# -------------SECURITY-------------
+
+# Cache Files
+# ---------------
+
+/public/site/cache/*
+!/public/site/cache/index.html
+
+# Accounts
+# ---------------
+
+/public/site/accounts/*
+!/public/site/accounts/index.html
+
+# Sessions
+# ---------------
+
+/public/site/sessions/*
+!/public/site/sessions/index.html
+
+# License
+# ---------------
+/public/site/config/.license

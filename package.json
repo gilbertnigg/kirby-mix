@@ -1,0 +1,27 @@
+{
+  "name": "gilles-website",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:gilbertnigg/gilles-website.git"
+  },
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "watch": "mix watch",
+    "prod": "mix --production"
+  },
+  "keywords": [],
+  "author": "Gilbert Nigg",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "laravel-mix": "^6.0.6",
+    "postcss": "^8.2.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "tailwindcss": "^2.0.2"
+  }
+}

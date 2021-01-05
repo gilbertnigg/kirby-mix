@@ -1,0 +1,10 @@
+title: Datei
+
+accept:
+  type: document, archive
+
+fields:
+  caption:
+    label: Beschreibung
+    type: text
+    width: 1/2

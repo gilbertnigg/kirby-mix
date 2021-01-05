@@ -1,0 +1,11 @@
+title: Bild
+
+accept:
+  mime: image/jpeg, image/png, image/gif
+  type: image
+
+fields:
+  caption:
+    label: Beschreibung
+    type: text
+    width: 1/2
