@@ -1,21 +1,37 @@
 let mix = require('laravel-mix');
 
-mix.js('src/scripts/app.js', 'public/assets/js')
-  .setPublicPath('public/assets')
-  .postCss('src/styles/app.css', 'public/assets/css', [
-    require('autoprefixer'),
-    require('tailwindcss')
-  ])
-  .copyDirectory('src/fonts', 'public/assets/fonts')
-  .copyDirectory('src/images', 'public/assets/img')
+mix.options({
+    processCssUrls: false
+  })
+  .setPublicPath(process.env.MIX_DIST)
+  .js(
+    process.env.MIX_SRC + '/scripts/app.js',
+    process.env.MIX_DIST + '/js/'
+  )
+  .postCss(
+    process.env.MIX_SRC + '/styles/app.css',
+    process.env.MIX_DIST + '/css/',
+    [
+      require('autoprefixer'),
+      require('tailwindcss')
+    ]
+  )
+  .copyDirectory(
+    process.env.MIX_SRC + '/fonts/',
+    process.env.MIX_DIST + '/fonts/'
+  )
+  .copyDirectory(
+    process.env.MIX_SRC + '/images/',
+    process.env.MIX_DIST + '/img/'
+  )
   .browserSync({
-    proxy: process.env.MIX_PROXY_LOCAL,
+    proxy: process.env.MIX_PROXY,
     files: [
-      'public/assets/css/**/*.css',
-      'public/assets/js/**/*.js',
+      process.env.MIX_DIST + '/js/**/*.js',
+      process.env.MIX_DIST + '/css/**/*.css',
       'public/content/**/*.txt',
-      'public/site/plugins/**/*.php',
       'public/site/snippets/**/*.php',
+      'public/site/plugins/**/*.php',
       'public/site/templates/*.php'
     ],
   });
