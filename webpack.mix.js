@@ -12,8 +12,9 @@ mix.options({
     process.env.MIX_SRC + '/styles/app.css',
     process.env.MIX_DIST + '/css/',
     [
-      require('autoprefixer'),
-      require('tailwindcss')
+      require('postcss-import'),
+      require('tailwindcss'),
+      require('autoprefixer')
     ]
   )
   .copyDirectory(

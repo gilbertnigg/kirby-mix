@@ -14,14 +14,15 @@
   "keywords": [],
   "author": "Gilbert Nigg",
   "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "tailwindcss": "^2.0.2"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.2.2",
     "laravel-mix": "^6.0.6",
-    "postcss": "^8.2.2"
-  },
-  "dependencies": {
-    "autoprefixer": "^10.1.0",
-    "tailwindcss": "^2.0.2"
+    "postcss": "^8.2.1",
+    "postcss-import": "^14.0.0"
   }
 }
