@@ -18,6 +18,13 @@ node_modules
 Icon
 .DS_Store
 
+# Editor config files
+# ------------
+
+.vscode
+.nova
+.idea
+
 # Temporary files
 # ---------------
 
