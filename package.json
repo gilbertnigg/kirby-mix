@@ -1,10 +1,10 @@
 {
-  "name": "gilles-website",
+  "name": "laravel-mix-package",
   "version": "1.0.0",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git://github.com:gilbertnigg/gilles-website.git"
+    "url": "git://github.com:gilbertnigg/kirby-mix.git"
   },
   "main": "src/scripts/app.js",
   "scripts": {
@@ -15,14 +15,14 @@
   "author": "Gilbert Nigg",
   "license": "ISC",
   "dependencies": {
-    "autoprefixer": "^10.1.0",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
+    "autoprefixer": "^10.1.0",
     "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "^2.2.2",
-    "laravel-mix": "^6.0.6",
-    "postcss": "^8.2.1",
+    "laravel-mix": "^6.0.8",
+    "postcss": "^8.2.3",
     "postcss-import": "^14.0.0"
   }
 }
