@@ -12,3 +12,8 @@ insert_final_newline = true
 [{*.php,composer.json,*.md}]
 indent_size = 4
 indent_style = tab
+
+
+[{*.md}]
+insert_final_newline = false
+trim_trailing_whitespace = false
