@@ -12,26 +12,23 @@ tabs:
     label: SEO
     icon: search
     columns:
-      left:
-        width: 2/3
+      - width: 2/3
         fields:
           description:
             label: SEO Beschreibung
             type: textarea
             buttons: false
-      right:
-        width: 1/3
-        fields:
+      - width: 1/3
+        sections:
           icon:
-            label: Icon
+            label: Website Icon
             type: files
+            template: seo-icon
             multiple: false
             max: 1
             layout: cards
+            help: 1500×1500 Pixel
             image:
               ratio: 1/1
               cover: true
               back: white
-            template: icon
-            uploads:
-              template: icon

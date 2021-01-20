@@ -12,14 +12,11 @@
 <meta property="og:type" content="website">
 <meta property="twitter:title" content="<?= $site->title() ?>">
 <meta property="twitter:description" content="<?= $site->description() ?>">
-<?php if ($seoIcon = $site->seoIcon()->toFile()) : ?>
+<?php if ($seoIcon = $site->files()->template('seo-icon')->first()) : ?>
     <link rel="apple-touch-icon" href="<?= $seoIcon->crop(1500, 1500)->url() ?>">
     <link rel="image_src" href="<?= $seoIcon->crop(1500, 1500)->url() ?>">
     <meta property="og:image" content="<?= $seoIcon->crop(1500, 1500)->url() ?>">
     <meta property="twitter:image" content="<?= $seoIcon->crop(1500, 1500)->url() ?>">
-<?php endif ?>
-<?php if ($site->color()->isNotEmpty()) : ?>
-    <meta name="theme-color" content="<?= $site->color() ?>">
 <?php endif ?>
 <?= css([$kirby->url('assets').'/css/app.css']) ?>
 <?= js($kirby->url('assets').'/js/app.js', ['defer' => true]) ?>
