@@ -25,6 +25,7 @@ tabs:
             type: files
             template: seo-icon
             multiple: false
+            sortable: false
             max: 1
             layout: cards
             help: 1500×1500 Pixel
