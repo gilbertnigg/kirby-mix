@@ -21,14 +21,14 @@ tabs:
       - width: 1/3
         sections:
           icon:
-            label: Website Icon
+            headline: Website Icon
             type: files
             template: seo-icon
             multiple: false
             sortable: false
             max: 1
             layout: cards
-            help: 1500×1500 Pixel
+            help: Format PNG, 1500×1500 Pixel
             image:
               ratio: 1/1
               cover: true
