@@ -1,0 +1,17 @@
+title: Editor
+panel: true
+permissions:
+  site: true
+  users: false
+  user:
+    changeRole: false
+    changeName: false
+    changeEmail: true
+    changeLanguage: true
+    changePassword: true
+    delete: false
+
+fields:
+  bookmarks:
+    label: Ihre Lesezeichen
+    type: pages
