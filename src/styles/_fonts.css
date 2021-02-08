@@ -1,0 +1,18 @@
+/* purgecss start ignore */
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/MyFont-Bol/font.woff2') format('woff2'), url('../fonts/MyFont-Bol/font.woff') format('woff');
+  font-weight: 700;
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'MyFont';
+  src: url('../fonts/MyFont-Med/font.woff2') format('woff2'), url('../fonts/MyFont-Med/font.woff') format('woff');
+  font-weight: 400;
+  font-display: fallback;
+}
+
+
+/* purgecss end ignore */

@@ -1,0 +1,64 @@
+/* purgecss start ignore */
+
+
+/*** Header ***/
+header {
+
+}
+@screen md {
+  header {}
+}
+
+
+/*** Content ***/
+main {
+  @apply block;
+}
+
+article {
+
+}
+@screen md {
+  article {}
+}
+address {
+  @apply not-italic;
+}
+
+
+/*** Typography ***/
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+h1, h2 {
+  @apply text-2xl;
+}
+@screen md {
+  h1, h2 {
+    @apply text-3xl;
+  }
+}
+@screen lg {
+  h1, h2 {
+    @apply text-4xl;
+  }
+}
+
+article p {
+  @apply mb-3;
+}
+article ul {
+  @apply list-disc;
+  @apply list-outside;
+  @apply ml-5;
+  @apply mb-3;
+}
+article ol {
+  @apply list-decimal;
+  @apply list-outside;
+  @apply ml-5;
+  @apply mb-3;
+}
+
+
+/* purgecss end ignore */
