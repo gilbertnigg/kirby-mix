@@ -1,5 +1,9 @@
 
 module.exports = {
+  corePlugins: {
+    textOpacity: false,
+    backgroundOpacity: false,
+  },
   purge: {
     content: [
       './public/site/plugins/**/*.php',
