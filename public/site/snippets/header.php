@@ -25,7 +25,7 @@
 <?= js($kirby->url('assets').'/js/app.js', ['defer' => true]) ?>
 </head>
 
-<body>
+<body class="text-base text-primary subpixel-antialiased">
 
 <header>
 </header>
