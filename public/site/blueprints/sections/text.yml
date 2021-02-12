@@ -1,0 +1,27 @@
+# type: writer
+# marks:
+#     - bold
+#     - link
+
+# type: textarea
+# buttons:
+#   - bold
+#   - ul
+#   - '|'
+#   - link
+#   - email
+
+# add plugin
+# composer require k-community/markdown-field
+type: markdown
+blank: true
+font:
+  family: sans-serif
+  scaling: false
+  size: regular
+buttons:
+  - bold
+  - ul
+  - link
+  - email
+  - pagelink
