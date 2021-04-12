@@ -6,28 +6,28 @@ node_modules
 # ------------
 /public/assets/*
 
+# Content files
+# ------------
+/public/content/*
+
 # Kirby files
 # ------------
-
 /public/kirby/*
 /public/vendor/*
 
 # System files
 # ------------
-
 Icon
 .DS_Store
 
 # Editor config files
 # ------------
-
 .vscode
 .nova
 .idea
 
 # Temporary files
 # ---------------
-
 /public/media/*
 !/public/media/index.html
 
@@ -41,19 +41,16 @@ Icon
 
 # Cache Files
 # ---------------
-
 /public/site/cache/*
 !/public/site/cache/index.html
 
 # Accounts
 # ---------------
-
 /public/site/accounts/*
 !/public/site/accounts/index.html
 
 # Sessions
 # ---------------
-
 /public/site/sessions/*
 !/public/site/sessions/index.html
 
