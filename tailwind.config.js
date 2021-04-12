@@ -1,9 +1,13 @@
 
 module.exports = {
+  // Turn on jus-in-time
+  mode: 'jit',
+  // Better IE support
   corePlugins: {
     textOpacity: false,
     backgroundOpacity: false,
   },
+  // Purge files
   purge: {
     content: [
       './public/site/plugins/**/*.php',
@@ -22,7 +26,7 @@ module.exports = {
     },
     screens: {
       'xs': [
-        {'max': '639px'},
+        { 'max': '639px' },
       ],
       'sm': '640px',
       'md': '768px',
