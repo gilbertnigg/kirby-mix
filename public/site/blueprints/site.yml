@@ -4,10 +4,22 @@ tabs:
   content:
     label: Website
     icon: text
-    sections:
-      pages:
-        headline: Rubriken
-        status: all
+    columns:
+      - width: 2/3
+        sections:
+          projekte:
+            headline: Projekte
+            type: pages
+            template: projekt
+            parent: site.find("projekt")
+            status: all
+      - width: 1/3
+        sections:
+          pages:
+            headline: Rubriken
+            create: false
+            image: false
+            status: all
   seo:
     label: SEO
     icon: search
