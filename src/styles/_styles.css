@@ -3,11 +3,7 @@
 .__center {
     @apply mx-auto;
     @apply px-6;
-}
-@screen sm {
-    .__center {
-        @apply px-8;
-    }
+    @apply sm:px-8;
 }
 
 /* purgecss end ignore */
