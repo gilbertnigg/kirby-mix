@@ -1,15 +1,19 @@
 <?php
 
 return [
-    'debug' => true,
-    'panel' => [
-        'language' => 'de',
-        'slug' => 'admin'
-    ],
+    'debug' => (
+		in_array($_SERVER['HTTP_HOST'], ['projects', 'testserver.com']) ? true : false
+	),
 	'auth' => [
 		'methods' => ['password', 'password-reset']
 	],
-	'thumbs' => [ // fix png opacity
-		'driver' => 'im'
-	]
+	// 'languages' => true,
+	'panel' => [
+		'language' => 'de',
+		'css' => 'assets/css/custom-panel.css',
+		'slug' => 'admin'
+	],
+	'thumbs' => [ // fix png opacity, no ImageMagick on local MAMP default
+		'driver' => in_array($_SERVER['HTTP_HOST'], ['projects']) ? 'gd' : 'im'
+	],
 ];
