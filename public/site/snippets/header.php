@@ -21,8 +21,9 @@
     <meta property="og:image" content="<?= $seoIcon->crop(1500, 1500)->url() ?>">
     <meta property="twitter:image" content="<?= $seoIcon->crop(1500, 1500)->url() ?>">
 <?php endif ?>
-<?= css([$kirby->url('assets').'/css/app.css']) ?>
-<?= js($kirby->url('assets').'/js/app.js', ['defer' => true]) ?>
+<?= css(['assets/css/app.css?v='.($kirby->option('debug') ? time() : 1)]) ?>
+<?= js('assets/js/app.js?v='.($kirby->option('debug') ? time() : 1), ['defer' => true]) ?>
+
 </head>
 
 <body class="text-base text-primary subpixel-antialiased">
