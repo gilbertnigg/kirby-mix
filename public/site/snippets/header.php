@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><?= $site->title() ?></title>
+<title><?= $site->title() ?> - <?= $page->title() ?></title>
 <meta name="description" content="<?= $site->description() ?>">
-<meta property="og:title" content="<?= $site->title() ?>">
+<meta property="og:title" content="<?= $site->title() ?> - <?= $page->title() ?>">
 <meta property="og:description" content="<?= $site->description() ?>">
 <meta property="og:url" content="<?= $page->url() ?>">
 <meta property="og:type" content="website">
-<meta property="twitter:title" content="<?= $site->title() ?>">
+<meta property="twitter:title" content="<?= $site->title() ?> - <?= $page->title() ?>">
 <meta property="twitter:description" content="<?= $site->description() ?>">
 <?php if ($seoIcon = $site->files()->template('seo-icon')->first()) : ?>
 	<link rel="icon" type="image/png" href="<?= $seoIcon->crop(32, 32)->url() ?>" sizes="32x32">
