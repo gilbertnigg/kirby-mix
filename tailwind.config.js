@@ -1,7 +1,8 @@
 
 module.exports = {
   // Turn on jus-in-time
-  mode: 'jit',
+  // Don't use it with corePlugins / IE support
+  // mode: 'jit',
   // Better IE support
   corePlugins: {
     textOpacity: false,
