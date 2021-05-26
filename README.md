@@ -1,5 +1,5 @@
 # Kirby-Mix
-### Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS  
+### Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS
 
 Install frontend
 - [Laravel Mix](https://laravel-mix.com  )
@@ -14,6 +14,11 @@ Install backend
 ```
 cd public
 composer install
+```
+- [Workaround ProcessWire CMS](https://processwire.com  )
+```
+rm -r public
+composer create-project processwire/processwire public
 ```
 ---
 `npm run` scripts
