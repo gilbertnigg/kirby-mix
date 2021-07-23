@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><?= $site->title() ?> - <?= $page->title() ?></title>
+<script>
+document.documentElement.classList.remove('no-js');
+document.documentElement.classList.add('js');
+</script>
+<script type="nomodule">
+document.documentElement.classList.add('is-ie');
+</script>
 <meta name="description" content="<?= $site->description() ?>">
 <meta property="og:title" content="<?= $site->title() ?> - <?= $page->title() ?>">
 <meta property="og:description" content="<?= $site->description() ?>">

@@ -16,11 +16,10 @@ columns:
             extends: sections/text
   - width: 1/3
     sections:
-      bild:
-        headline: Bild
+      bilder:
+        headline: Bilder
         type: files
         template: image
-        max: 1
         layout: cards
         image:
           ratio: 3/2
