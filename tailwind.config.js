@@ -6,6 +6,7 @@ module.exports = {
   // Better IE support
   corePlugins: {
     textOpacity: false,
+    borderOpacity: false,
     backgroundOpacity: false,
   },
   // Purge files
