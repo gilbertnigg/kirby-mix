@@ -53,4 +53,12 @@ article ol {
 }
 
 
+/*** Center ***/
+.__center {
+  @apply max-w-screen-xl;
+  @apply mx-auto;
+  @apply px-4;
+  @apply md:px-8;
+}
+
 /* purgecss end ignore */

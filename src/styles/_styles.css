@@ -1,9 +1,3 @@
 /* purgecss start ignore */
 
-.__center {
-    @apply mx-auto;
-    @apply px-6;
-    @apply sm:px-8;
-}
-
 /* purgecss end ignore */
