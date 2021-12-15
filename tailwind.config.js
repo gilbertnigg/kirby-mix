@@ -1,27 +1,21 @@
 
 module.exports = {
-  // Turn on jus-in-time
-  // Don't use it with corePlugins / IE support
-  // mode: 'jit',
-  // Better IE support
   corePlugins: {
     textOpacity: false,
     borderOpacity: false,
     backgroundOpacity: false,
   },
   // Purge files
-  purge: {
-    content: [
+  content: {
+    files: [
       './public/site/plugins/**/*.php',
       './public/site/snippets/**/*.php',
       './public/site/templates/**/*.php',
       './src/scripts/**/*.js',
-    ],
-    options: {
-      whitelist: ['is-selected', 'is-open'],
-    }
+    ]
   },
-  darkMode: false, // or 'media' or 'class'
+  safelist: ['is-selected', 'is-open'],
+  darkMode: 'media',
   theme: {
     fontFamily: {
       sans: ['Helvetica', 'Roboto', 'sans-serif'],
