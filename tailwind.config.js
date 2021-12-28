@@ -6,14 +6,12 @@ module.exports = {
     backgroundOpacity: false,
   },
   // Purge files
-  content: {
-    files: [
-      './public/site/plugins/**/*.php',
-      './public/site/snippets/**/*.php',
-      './public/site/templates/**/*.php',
-      './src/scripts/**/*.js',
-    ]
-  },
+  content: [
+    './public/site/plugins/**/*.php',
+    './public/site/snippets/**/*.php',
+    './public/site/templates/**/*.php',
+    './src/scripts/**/*.js',
+  ],
   safelist: ['is-selected', 'is-open'],
   darkMode: 'media',
   theme: {
