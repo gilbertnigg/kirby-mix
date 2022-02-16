@@ -1,11 +1,7 @@
 title: Projekte
 
 options:
-  changeSlug: false
-  # changeStatus: false
-  # changeTitle: false
   delete: false
-  duplicate: false
 
 columns:
   - width: 2/3

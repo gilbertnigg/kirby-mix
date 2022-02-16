@@ -3,7 +3,7 @@ title: Site
 tabs:
   content:
     label: Website
-    icon: text
+    icon: sitemap
     columns:
       - width: 2/3
         sections:
@@ -26,10 +26,11 @@ tabs:
     columns:
       - width: 2/3
         fields:
-          description:
+          seo_description:
             label: SEO Beschreibung
             type: textarea
             buttons: false
+            help: 100 bis 150 Zeichen
       - width: 1/3
         sections:
           icon:

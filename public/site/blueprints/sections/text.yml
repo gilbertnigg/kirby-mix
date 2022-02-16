@@ -1,12 +1,6 @@
 type: writer
 marks:
-    - bold
-    - link
-
-# type: textarea
-# buttons:
-#   - bold
-#   - ul
-#   - '|'
-#   - link
-#   - email
+  - bold
+  - link
+nodes:
+  - bulletList

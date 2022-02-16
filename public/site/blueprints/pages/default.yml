@@ -1,30 +1,54 @@
 title: Default Page
 icon: page
 
-columns:
-  - width: 2/3
-    sections:
-      content:
-        type: fields
+tabs:
+  content:
+    label: Inhalt
+    icon: document
+    columns:
+      - width: 2/3
+        sections:
+          content:
+            type: fields
+            fields:
+              headline:
+                label: Headline
+                type: textarea
+                buttons: false
+              text:
+                label: Text
+                extends: sections/text
+      - width: 1/3
+        sections:
+          bilder:
+            headline: Bilder
+            type: files
+            template: image
+            layout: cards
+            image:
+              ratio: 3/2
+              back: white
+          pages:
+            headline: Rubriken
+            type: pages
+            template: rubrik
+
+  seo:
+    label: SEO
+    icon: search
+    columns:
+      - width: 2/3
         fields:
-          headline:
-            label: Headline
+          seo_heading:
+            label: SEO
+            type: headline
+            numbered: false
+          seo_title:
+            label: Seitentitel
+            type: text
+            help: 50 bis 60 Zeichen
+          seo_description:
+            label: Seitenbeschreibung
             type: textarea
             buttons: false
-          text:
-            label: Text
-            extends: sections/text
-  - width: 1/3
-    sections:
-      bilder:
-        headline: Bilder
-        type: files
-        template: image
-        layout: cards
-        image:
-          ratio: 3/2
-          back: white
-      pages:
-        headline: Rubriken
-        type: pages
-        template: rubrik
+            help: 100 bis 150 Zeichen
