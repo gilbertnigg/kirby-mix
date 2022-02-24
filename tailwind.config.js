@@ -7,6 +7,7 @@ module.exports = {
   },
   // Purge files
   content: [
+    './public/site/controllers/**/*.php',
     './public/site/plugins/**/*.php',
     './public/site/snippets/**/*.php',
     './public/site/templates/**/*.php',
