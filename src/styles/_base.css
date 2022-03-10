@@ -60,6 +60,8 @@ article ol {
   @apply px-4;
   @apply md:px-8;
 }
+
+
 /*** Grid ***/
 .__grid {
   @apply flex;
@@ -70,5 +72,20 @@ article ol {
   @apply px-2;
   @apply mb-4;
 }
+
+
+/*** Helpers ***/
+.show-for-ie {
+  display: none;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .show-for-ie {
+    display: block !important;
+  }
+  .hide-for-ie {
+    display: none !important;
+  }
+}
+
 
 /* purgecss end ignore */
