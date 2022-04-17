@@ -16,9 +16,9 @@ document.documentElement.classList.add('is-ie');
 <meta property="twitter:title" content="<?= $site->title().(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
 <meta property="twitter:description" content="<?= $page->seo_description()->or($site->seo_description()) ?>">
 <?php if ($seoIcon = $site->files()->template('seo-icon')->first()) : ?>
-	<link rel="icon" type="image/png" href="<?= $seoIcon->crop(32, 32)->url() ?>" sizes="32x32">
-	<link rel="icon" type="image/png" href="<?= $seoIcon->crop(48, 48)->url() ?>" sizes="48x48">
-	<link rel="icon" type="image/png" href="<?= $seoIcon->crop(96, 96)->url() ?>" sizes="96x96">
+	<link rel="icon" type="<?= $seoIcon->mime() ?>" href="<?= $seoIcon->crop(32, 32)->url() ?>" sizes="32x32">
+	<link rel="icon" type="<?= $seoIcon->mime() ?>" href="<?= $seoIcon->crop(48, 48)->url() ?>" sizes="48x48">
+	<link rel="icon" type="<?= $seoIcon->mime() ?>" href="<?= $seoIcon->crop(96, 96)->url() ?>" sizes="96x96">
 	<link rel="apple-touch-icon" href="<?= $seoIcon->crop(1500, 1500)->url() ?>">
     <link rel="image_src" href="<?= $seoIcon->crop(1500, 1500)->url() ?>">
     <meta property="og:image" content="<?= $seoIcon->crop(1500, 1500)->url() ?>">
