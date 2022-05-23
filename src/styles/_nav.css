@@ -1,0 +1,24 @@
+/* purgecss start ignore */
+
+header nav >ul {
+  @apply md:flex;
+}
+
+/*** Navicon ***/
+#navicon {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#navicon .is-open {
+  @apply block
+}
+#navicon .is-closed {
+  @apply hidden;
+}
+.nav-open #navicon .is-open {
+  @apply hidden;
+}
+.nav-open #navicon .is-closed {
+  @apply block
+}
+
+/* purgecss end ignore */

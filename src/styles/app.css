@@ -3,4 +3,5 @@
 @import "./_base.css";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "./_nav.css";
 @import "./_styles.css";

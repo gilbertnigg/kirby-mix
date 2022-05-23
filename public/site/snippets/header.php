@@ -32,6 +32,10 @@ document.documentElement.classList.add('is-ie');
 <body class="text-base text-primary subpixel-antialiased">
 
 <header>
+	<button id="navicon" aria-label="Menu open/close">
+		<span class="is-open">+</span>
+		<span class="is-closed">&times;</span>
+	</button>
 </header>
 
 <nav>
