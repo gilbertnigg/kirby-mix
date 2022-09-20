@@ -5,6 +5,9 @@ header nav >ul {
 }
 
 /*** Navicon ***/
+:root.nav-open, :root.nav-open body {
+  @apply overflow-hidden;
+}
 #navicon {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
