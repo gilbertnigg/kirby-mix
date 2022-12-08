@@ -5,7 +5,7 @@ accept:
   type: image
 
 fields:
-  caption:
-    label: Beschreibung
+  alt:
+    label: Alternativtext
     type: text
     width: 1/2

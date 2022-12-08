@@ -37,3 +37,6 @@ columns:
         headline: Bilder
         type: files
         template: image
+        info: "{{ file.alt }}"
+        image:
+          back: black

@@ -25,9 +25,9 @@ tabs:
             type: files
             template: image
             layout: cards
+            info: "{{ file.alt }}"
             image:
-              ratio: 3/2
-              back: white
+              back: black
           pages:
             headline: Rubriken
             type: pages
