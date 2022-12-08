@@ -33,8 +33,10 @@ columns:
         image:
           ratio: 3/2
           cover: true
-          back: white
+          back: black
       bilder:
         headline: Bilder
         type: files
         template: image
+        image:
+          back: black

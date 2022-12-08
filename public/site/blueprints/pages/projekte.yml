@@ -24,5 +24,6 @@ columns:
         info: "{{ page.date.toDate('d.m.Y') }}"
         template: projekt
         image:
-        query: page.images.findBy('template', 'cover')
+          query: page.images.findBy('template', 'cover')
+          back: black
         #query: page.images.sortBy('sort','asc', 'filename','asc').first

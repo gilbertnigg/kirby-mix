@@ -13,6 +13,8 @@ tabs:
             template: projekt
             parent: site.find("projekt")
             status: all
+            image:
+              back: black
       - width: 1/3
         sections:
           pages:
