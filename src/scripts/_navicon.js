@@ -1,6 +1,4 @@
-const navicon = document.getElementById('navicon');
-
-navicon.addEventListener('click', function(e) {
+document.getElementById('navicon').addEventListener('click', (e) => {
   e.preventDefault();
   document.documentElement.classList.toggle('nav-open');
 });
