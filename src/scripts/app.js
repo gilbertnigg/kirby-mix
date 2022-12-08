@@ -1,6 +1,4 @@
-document.documentElement.classList.remove('no-js');
-document.documentElement.classList.add('js');
-
 import './_navicon';
+import './_alpine';
 
 console.log('hello world');

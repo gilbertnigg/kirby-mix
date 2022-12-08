@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><?= $site->title().(!$page->isHomePage() ? ' - '.$page->title() : '') ?></title>
-<script type="nomodule">
-document.documentElement.classList.add('is-ie');
+<script type="module">
+document.documentElement.classList.remove('no-js');
+document.documentElement.classList.add('js');
 </script>
 <meta name="description" content="<?= $page->seo_description()->or($site->seo_description()) ?>">
 <meta property="og:title" content="<?= $site->title().(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
