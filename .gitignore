@@ -25,6 +25,7 @@ Icon
 .vscode
 .nova
 .idea
+.env
 
 # Temporary files
 # ---------------
