@@ -4,6 +4,40 @@ header nav >ul {
   @apply md:flex;
 }
 
+
+/*** Dropdown nav ***/
+nav.is-dropdown >ul >li {
+  @apply relative;
+}
+nav.is-dropdown >ul >li >ul {
+  @apply hidden;
+  @apply absolute;
+  @apply z-0;
+  @apply pt-6;
+  @apply -mx-4;
+  @apply whitespace-nowrap;
+  @apply border-b border-primary;
+  @apply bg-white;
+}
+nav.is-dropdown >ul >li >ul >li {
+  @apply block;
+  @apply pt-2;
+  @apply border-l border-r border-primary;
+  @apply bg-white;
+}
+nav.is-dropdown >ul >li >ul >li:last-child {
+  @apply pb-4;
+}
+nav.is-dropdown >ul >li >ul >li > a {
+   @apply block;
+   @apply px-4;
+}
+@screen md {
+  nav.is-dropdown >ul >li:hover >ul {
+    @apply block;
+  }
+}
+
 /*** Navicon ***/
 :root.nav-open, :root.nav-open body {
   @apply overflow-hidden;
