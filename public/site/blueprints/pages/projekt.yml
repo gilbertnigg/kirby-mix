@@ -23,6 +23,7 @@ columns:
             label: Datum
             type: date
             display: DD.MM.YYYY
+            required: true
       cover:
         headline: Cover
         type: files

@@ -23,6 +23,7 @@ columns:
         status: all
         info: "{{ page.date.toDate('d.m.Y') }}"
         template: projekt
+        sortBy: date desc
         image:
           query: page.images.findBy('template', 'cover')
           back: black

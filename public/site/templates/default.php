@@ -26,6 +26,17 @@
 </p>
 <?php endforeach ?>
 
+<hr>
+
+<?php foreach ($site->index()->template('projekt')->sortBy('datum', 'desc') as $projekt) : ?>
+<h3><?= $projekt->title() ?></h3>
+<?php if ($img = $projekt->images()->template('cover')->first()) : ?>
+<p>
+	<?php snippet('picture', ['img'=>$img, 'size'=>1200]) ?>
+</p>
+<?php endif ?>
+<?php endforeach ?>
+
 </article>
 
 <?php snippet('footer') ?>
