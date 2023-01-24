@@ -13,7 +13,7 @@ module.exports = {
     './public/site/templates/**/*.php',
     './src/scripts/**/*.js',
   ],
-  safelist: ['is-selected', 'is-open'],
+  safelist: ['is-selected', 'nav-open'],
   darkMode: 'media',
   theme: {
     fontFamily: {

@@ -34,12 +34,13 @@ document.documentElement.classList.add('js');
 
 <header>
 	<button id="navicon" aria-label="Menu open/close">
-		<span class="is-open">+</span>
+		<span class="is-open">&plus;</span>
 		<span class="is-closed">&times;</span>
 	</button>
 </header>
 
-<nav>
+<nav class="is-responsive is-dropdown">
+	<?php snippet('nav-menu') ?>
 </nav>
 
 <main>

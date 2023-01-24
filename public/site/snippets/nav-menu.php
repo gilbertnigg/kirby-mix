@@ -1,9 +1,5 @@
 <ul>
 
-	<li class="<?= ($page === $pages->get('home') ? 'is-selected' : '') ?>">
-		<?= $pages->get('home')->title()->link() ?>
-	</li>
-
 	<?php /* Level 1 */ foreach ($site->children()->listed() as $_page_l1) : ?>
 	<li class="<?= ($page === $_page_l1 || $page->parents()->has($_page_l1) ? 'is-selected' : '') ?>">
 		<?= $_page_l1->title()->link() ?>
