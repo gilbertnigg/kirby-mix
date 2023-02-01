@@ -30,7 +30,6 @@ columns:
         template: cover
         max: 1
         layout: cards
-        size: large
         image:
           ratio: 3/2
           cover: true
