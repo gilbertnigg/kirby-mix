@@ -1,0 +1,21 @@
+title: Error
+icon: alert
+
+options:
+  changeSlug: false
+  changeStatus: false
+  delete: false
+  duplicate: false
+  read: false
+
+sections:
+  content:
+    type: fields
+    fields:
+      headline:
+        label: Headline
+        type: textarea
+        buttons: false
+      text:
+        label: Text
+        extends: sections/text
