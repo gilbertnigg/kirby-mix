@@ -11,6 +11,9 @@
     "watch": "mix watch",
     "prod": "mix --production"
   },
+  "prettier": {
+    "singleQuote": true
+  },
   "keywords": [],
   "author": "Gilbert Nigg",
   "license": "ISC",
