@@ -22,6 +22,9 @@
         "getkirby/cms": "^3.8.2"
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        }
     }
 }
