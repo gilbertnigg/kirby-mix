@@ -1,4 +1,4 @@
-<ul>
+<ul class="[&_li.is-selected>a]:text-secondary [&_li>a:hover]:text-secondary">
 
 	<?php /* Level 1 */ foreach ($site->children()->listed() as $_page_l1) : ?>
 	<li class="<?= ($page === $_page_l1 || $page->parents()->has($_page_l1) ? 'is-selected' : '') ?>">
