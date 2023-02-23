@@ -15,11 +15,6 @@ Install backend
 cd public
 composer install
 ```
-- [Workaround ProcessWire CMS](https://processwire.com  )
-```
-rm -r public
-composer create-project processwire/processwire public
-```
 ---
 `npm run` scripts
 
