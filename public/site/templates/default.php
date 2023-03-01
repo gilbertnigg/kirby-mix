@@ -10,7 +10,7 @@
 <?php if ($img = $page->images()->template('cover')->first()) : ?>
 <p>
 	<figure>
-		<img src="<?= $img->resize(1200)->url() ?>" alt="<?= $img->alt()->isNotEmpty() ? $img->alt() : $page->title() ?>">
+		<img src="<?= $img->resize(1216)->url() ?>" alt="<?= $img->alt()->isNotEmpty() ? $img->alt() : $page->title() ?>">
 		<?php if ($img->alt()->isNotEmpty()) : ?>
 		<figcaption><?= $img->alt() ?></figcaption>
 		<?php endif ?>
@@ -22,7 +22,7 @@
 
 <?php foreach ($page->images()->template('image')->sortBy('sort', 'asc', 'filename', 'asc') as $img) : ?>
 <p>
-	<?php snippet('picture', ['img'=>$img, 'size'=>1200]) ?>
+	<?php snippet('picture', ['img'=>$img, 'size'=>1216]) ?>
 </p>
 <?php endforeach ?>
 
@@ -32,7 +32,7 @@
 <h3><?= $projekt->title() ?></h3>
 <?php if ($img = $projekt->images()->template('cover')->first()) : ?>
 <p>
-	<?php snippet('picture', ['img'=>$img, 'size'=>1200]) ?>
+	<?php snippet('picture', ['img'=>$img, 'size'=>1216]) ?>
 </p>
 <?php endif ?>
 <?php endforeach ?>
