@@ -10,7 +10,8 @@ return [
 	// 'languages' => true,
 	'panel' => [
 		'language' => 'de',
-		'css' => 'assets/css/custom-panel.css',
+		// 'css' => 'assets/css/custom-panel.css',
+		'favicon' => 'favicon.ico',
 		'slug' => 'admin'
 	],
 	'thumbs' => [ // fix png opacity, no ImageMagick on local MAMP default
