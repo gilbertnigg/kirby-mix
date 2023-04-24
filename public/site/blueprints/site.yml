@@ -28,11 +28,7 @@ tabs:
     columns:
       - width: 2/3
         fields:
-          seo_description:
-            label: SEO Beschreibung
-            type: textarea
-            buttons: false
-            help: 100 bis 150 Zeichen
+          extends: sections/seo
       - width: 1/3
         sections:
           icon:

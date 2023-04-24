@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><?= $site->title().(!$page->isHomePage() ? ' - '.$page->title() : '') ?></title>
+<title><?= $site->seo_title()->or($site->title()).(!$page->isHomePage() ? ' - '.$page->title() : '') ?></title>
 <script type="module">
 document.documentElement.classList.remove('no-js');
 document.documentElement.classList.add('js');
 </script>
 <meta name="description" content="<?= $page->seo_description()->or($site->seo_description()) ?>">
-<meta property="og:title" content="<?= $site->title().(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
+<meta property="og:title" content="<?= $site->seo_title()->or($site->title()).(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
 <meta property="og:description" content="<?= $page->seo_description()->or($site->seo_description()) ?>">
 <meta property="og:url" content="<?= $page->url() ?>">
 <meta property="og:type" content="website">
-<meta property="twitter:title" content="<?= $site->title().(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
+<meta property="twitter:title" content="<?= $site->seo_title()->or($site->title()).(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
 <meta property="twitter:description" content="<?= $page->seo_description()->or($site->seo_description()) ?>">
 <?php if ($seoIcon = $site->files()->template('seo-icon')->first()) : ?>
 	<link rel="icon" type="<?= $seoIcon->mime() ?>" href="<?= $seoIcon->crop(32, 32)->url() ?>" sizes="32x32">
