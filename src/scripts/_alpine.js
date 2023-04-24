@@ -1,3 +1,8 @@
+/*
+npm i @alpinejs/collapse
+npm i alpinejs
+*/
+
 import Alpine from 'alpinejs';
 import collapse from '@alpinejs/collapse';
 
