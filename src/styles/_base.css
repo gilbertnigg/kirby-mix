@@ -1,91 +1,10 @@
-/* purgecss start ignore */
-
-
-/*** Header ***/
-header {
-
-}
-@screen md {
-  header {}
-}
-
-
-/*** Content ***/
-main {
-  @apply block;
-}
-
-article {
-
-}
-@screen md {
-  article {}
-}
-address {
-  @apply not-italic;
-}
-
-
-/*** Typography ***/
-h1, h2, h3, h4, h5, h6 {
-  @apply font-bold;
-}
-h1, h2 {
-  @apply text-2xl;
-  @apply md:text-3xl;
-  @apply lg:text-4xl;
-}
-
-article p {
-  @apply mb-4;
-}
-article ul {
-  @apply list-disc;
-  @apply list-outside;
-  @apply ml-5;
-  @apply mb-4;
-}
-article ol {
-  @apply list-decimal;
-  @apply list-outside;
-  @apply ml-5;
-  @apply mb-4;
-}
-
-
-/*** Center ***/
-.__center {
-  @apply max-w-screen-xl;
-  @apply mx-auto;
-  @apply px-4;
-  @apply md:px-8;
-}
-
-
-/*** Grid ***/
-.__grid {
-  @apply flex;
-  @apply flex-wrap;
-  @apply -mx-2;
-}
-.__grid >div {
-  @apply px-2;
-  @apply mb-4;
-}
-
-
-/*** Helpers ***/
-.show-for-ie {
-  display: none;
-}
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .show-for-ie {
-    display: block !important;
+@layer base {
+  /* Gui */
+  html {
+    @apply text-base;
+    @apply text-body;
   }
-  .hide-for-ie {
-    display: none !important;
+  body {
+    @apply bg-gray-100;
   }
 }
-
-
-/* purgecss end ignore */

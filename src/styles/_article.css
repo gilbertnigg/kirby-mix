@@ -1,0 +1,35 @@
+@layer base {
+  /* Titles */
+  h1 {
+    @apply mb-4;
+    @apply font-bold;
+    @apply text-xl;
+  }
+  h2 {
+    @apply mb-4;
+    @apply text-lg;
+  }
+
+  /* Block elements */
+  article p {
+    @apply mb-4;
+  }
+  article ul {
+    @apply list-disc;
+    @apply list-outside;
+    @apply ml-5;
+    @apply mb-4;
+  }
+  article ol {
+    @apply list-decimal;
+    @apply list-outside;
+    @apply ml-5;
+    @apply mb-4;
+  }
+
+  /* Inline elements */
+  article a {
+    @apply underline;
+    @apply text-primary;
+  }
+}

@@ -1,6 +1,5 @@
 /* purgecss start ignore */
 
-
 @font-face {
   font-family: 'MyFont';
   src: url('../fonts/MyFont-Bol.woff2') format('woff2'), url('../fonts/MyFont-Bol.woff') format('woff');
@@ -15,6 +14,5 @@
   font-style: normal;
   font-display: fallback;
 }
-
 
 /* purgecss end ignore */
