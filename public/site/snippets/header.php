@@ -30,7 +30,7 @@ document.documentElement.classList.add('js');
 
 </head>
 
-<body class="text-base text-primary subpixel-antialiased">
+<body>
 
 <header>
 	<button id="navicon" aria-label="Menu open/close">
@@ -43,4 +43,4 @@ document.documentElement.classList.add('js');
 	<?php snippet('nav-menu') ?>
 </nav>
 
-<main>
+<main id="main">
