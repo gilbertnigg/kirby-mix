@@ -1,4 +1,8 @@
 @layer base {
+  /* Defaults */
+  main {
+    @apply block;
+  }
   /* Gui */
   html {
     @apply text-base;
