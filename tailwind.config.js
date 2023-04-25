@@ -13,7 +13,7 @@ module.exports = {
     './public/site/templates/**/*.php',
     './src/scripts/**/*.js',
   ],
-  safelist: ['is-selected', 'nav-open'],
+  safelist: ['nav-open', { pattern: /is-(.+)/ }],
   darkMode: 'media',
   theme: {
     screens: {
