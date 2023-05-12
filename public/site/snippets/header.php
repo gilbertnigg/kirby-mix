@@ -1,13 +1,17 @@
 <!doctype html>
-<html lang="de" class="no-js">
+<html lang="de" class="no-js no-module">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><?= $site->seo_title()->or($site->title()).(!$page->isHomePage() ? ' - '.$page->title() : '') ?></title>
 <script type="module">
+document.documentElement.classList.remove('no-module');
+document.documentElement.classList.add('is-module');
+</script>
+<script>
 document.documentElement.classList.remove('no-js');
-document.documentElement.classList.add('js');
+document.documentElement.classList.add('is-js');
 </script>
 <meta name="description" content="<?= $page->seo_description()->or($site->seo_description()) ?>">
 <meta property="og:title" content="<?= $site->seo_title()->or($site->title()).(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
