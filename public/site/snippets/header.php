@@ -36,6 +36,10 @@ document.documentElement.classList.add('is-js');
 
 <body>
 
+<a href="#main" class="transition-transform absolute z-50 top-4 left-1/2 -translate-x-1/2 -translate-y-16 p-2 whitespace-nowrap text-white bg-black focus:translate-y-0">
+	Skip to main content
+</a>
+
 <header>
 	<button id="navicon" aria-label="Menu open/close">
 		<span class="is-open">&plus;</span>

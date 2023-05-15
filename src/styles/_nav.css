@@ -5,8 +5,8 @@
   }
 
   /* Navicon */
-  :root.nav-open,
-  :root.nav-open body {
+  :root.is-nav-open,
+  :root.is-nav-open body {
     @apply overflow-hidden;
   }
   #navicon {
@@ -18,10 +18,10 @@
   #navicon .is-closed {
     @apply hidden;
   }
-  .nav-open #navicon .is-open {
+  .is-nav-open #navicon .is-open {
     @apply hidden;
   }
-  .nav-open #navicon .is-closed {
+  .is-nav-open #navicon .is-closed {
     @apply block;
   }
 
