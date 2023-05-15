@@ -11,4 +11,23 @@
   body {
     @apply bg-gray-100;
   }
+
+  /* Center */
+  .__center {
+    @apply max-w-screen-xl;
+    @apply mx-auto;
+    @apply px-4;
+    @apply md:px-8;
+  }
+
+  /* Grid */
+  .__grid {
+    @apply flex;
+    @apply flex-wrap;
+    @apply -mx-2;
+  }
+  .__grid > div {
+    @apply px-2;
+    @apply mb-4;
+  }
 }
