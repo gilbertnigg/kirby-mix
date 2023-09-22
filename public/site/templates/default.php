@@ -9,12 +9,14 @@
 
 <?php if ($cover) : ?>
 <p>
-	<figure>
-		<img src="<?= $cover->thumb(['width'=>800, 'height'=>600, 'crop'=>true])->url() ?>" alt="<?= $cover->alt()->isNotEmpty() ? $cover->alt() : $page->title() ?>">
-		<?php if ($cover->alt()->isNotEmpty()) : ?>
-		<figcaption><?= $cover->alt() ?></figcaption>
-		<?php endif ?>
-	</figure>
+	<img
+		srcset="<?= $cover->srcset([
+			'800w'  => ['width' => 800, 'format' => 'webp'],
+			'1600w'  => ['width' => 1600, 'format' => 'webp'],
+		])?>"
+		sizes="(min-width: 1000px) 100vw"
+		src="<?= $cover->thumb(['width'=>1400])->url() ?>" class="w-full" alt="<?= $cover->alt()->or($site->title()) ?>"
+	>
 </p>
 <?php endif ?>
 
@@ -22,7 +24,7 @@
 
 <?php foreach ($imgs as $img) : ?>
 <p>
-	<?php snippet('picture', ['img'=>$img, 'size'=>1216]) ?>
+	<img src="<?= $img->thumb(['width'=>1600])->url() ?>" alt="<?= $img->alt() ?>">
 </p>
 <?php endforeach ?>
 
@@ -32,7 +34,7 @@
 <h3><?= $projekt->title() ?></h3>
 <?php if ($img = $projekt->images()->template('cover')->first()) : ?>
 <p>
-	<?php snippet('picture', ['img'=>$img, 'size'=>1216]) ?>
+	<img src="<?= $img->thumb(['width'=>400])->url() ?>" alt="<?= $img->alt()->or($projekt->title()) ?>">
 </p>
 <?php endif ?>
 <?php endforeach ?>
