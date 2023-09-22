@@ -30,7 +30,7 @@
 
 <hr>
 
-<?php foreach ($site->index()->template('projekt')->sortBy('datum', 'desc') as $projekt) : ?>
+<?php foreach ($site->index()->template('projekt')->sortBy('date', 'desc') as $projekt) : ?>
 <h3><?= $projekt->title() ?></h3>
 <?php if ($img = $projekt->images()->template('cover')->first()) : ?>
 <p>
