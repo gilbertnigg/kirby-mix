@@ -1,6 +1,10 @@
+/*
+  The utilities layer is for small, single-purpose classes
+  that should always take precedence over any other styles.
+*/
 @layer utilities {
-
+  /* Fix mobile height */
+  .true-h-screen {
+    @apply h-screen supports-[height:100svh]:h-[100svh]
+  }
 }
-
-/* purgecss start ignore */
-/* purgecss end ignore */

@@ -3,7 +3,6 @@
   header nav > ul {
     @apply md:flex;
   }
-
   /* Navicon */
   :root.is-nav-open,
   :root.is-nav-open body {
@@ -25,6 +24,7 @@
     @apply block;
   }
 
+  /*** Navigation utilities ***/
   /* Dropdown nav */
   nav.is-dropdown ul a {
     @apply block;

@@ -1,4 +1,9 @@
+/*
+  The components layer is for class-based styles
+  that you want to be able to override with utilities.
+*/
 @layer components {
+  /* Buttons */
   .btn {
     @apply inline-block rounded my-2 py-2 px-4;
     @apply text-white font-bold;
@@ -7,5 +12,24 @@
     @apply btn;
     @apply no-underline;
     @apply bg-primary hover:bg-secondary;
+  }
+
+  /*** Layout ***/
+  /* Center */
+  .__center {
+    @apply max-w-screen-xl;
+    @apply mx-auto;
+    @apply px-4;
+    @apply md:px-8;
+  }
+  /* Grid */
+  .__grid {
+    @apply flex;
+    @apply flex-wrap;
+    @apply -mx-2;
+  }
+  .__grid > div {
+    @apply px-2;
+    @apply mb-4;
   }
 }

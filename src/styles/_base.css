@@ -1,9 +1,10 @@
+/*
+  The base layer is for things like reset rules
+  or default styles applied to plain HTML elements.
+*/
+
 @layer base {
-  /* Defaults */
-  main {
-    @apply block;
-  }
-  /* Gui */
+  /*** Defaults ***/
   html {
     @apply text-base;
     @apply text-body;
@@ -11,23 +12,40 @@
   body {
     @apply bg-gray-100;
   }
-
-  /* Center */
-  .__center {
-    @apply max-w-screen-xl;
-    @apply mx-auto;
-    @apply px-4;
-    @apply md:px-8;
+  main {
+    @apply block;
   }
 
-  /* Grid */
-  .__grid {
-    @apply flex;
-    @apply flex-wrap;
-    @apply -mx-2;
-  }
-  .__grid > div {
-    @apply px-2;
+  /*** Styles ***/
+  /* Titles */
+  h1 {
     @apply mb-4;
+    @apply font-bold;
+    @apply text-xl;
+  }
+  h2 {
+    @apply mb-4;
+    @apply text-lg;
+  }
+  /* Block elements */
+  article p {
+    @apply mb-4;
+  }
+  article ul {
+    @apply list-disc;
+    @apply list-outside;
+    @apply ml-5;
+    @apply mb-4;
+  }
+  article ol {
+    @apply list-decimal;
+    @apply list-outside;
+    @apply ml-5;
+    @apply mb-4;
+  }
+  /* Inline elements */
+  article a {
+    @apply underline;
+    @apply text-primary;
   }
 }

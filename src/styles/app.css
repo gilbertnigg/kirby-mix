@@ -1,9 +1,11 @@
 @import "tailwindcss/base";
 @import "_fonts";
 @import "_base";
-@import "_article";
 @import "tailwindcss/components";
 @import "_components";
 @import "_nav";
 @import "tailwindcss/utilities";
 @import "_utilities";
+
+/* purgecss start ignore */
+/* purgecss end ignore */

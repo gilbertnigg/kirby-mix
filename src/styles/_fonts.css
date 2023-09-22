@@ -1,18 +1,16 @@
-/* purgecss start ignore */
-
-@font-face {
-  font-family: 'MyFont';
-  src: url('../fonts/MyFont-Bol.woff2') format('woff2'), url('../fonts/MyFont-Bol.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: fallback;
+@layer base {
+  @font-face {
+    font-family: "MyFont";
+    src: url("../fonts/MyFont-Bol.woff2") format("woff2"), url("../fonts/MyFont-Bol.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+    font-display: fallback;
+  }
+  @font-face {
+    font-family: "MyFont";
+    src: url("../fonts/MyFont-Med.woff2") format("woff2"), url("../fonts/MyFont-Med.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: fallback;
+  }
 }
-@font-face {
-  font-family: 'MyFont';
-  src: url('../fonts/MyFont-Med.woff2') format('woff2'), url('../fonts/MyFont-Med.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
-}
-
-/* purgecss end ignore */
