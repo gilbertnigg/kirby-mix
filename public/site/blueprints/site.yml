@@ -19,7 +19,8 @@ tabs:
         sections:
           pages:
             headline: Rubriken
-            create: false
+            create:
+              - default
             image: false
             status: all
   seo:
