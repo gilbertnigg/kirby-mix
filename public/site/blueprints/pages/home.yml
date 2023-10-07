@@ -4,7 +4,6 @@ icon: home
 options:
   changeSlug: false
   changeStatus: false
-  changeTitle: false
   delete: false
   duplicate: false
 
