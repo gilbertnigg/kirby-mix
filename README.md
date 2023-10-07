@@ -31,4 +31,4 @@ npm run prod
 ```
 
 ---
-© [Gilbert Nigg](http://www.gilles.ch) 2021
+© [Gilbert Nigg](http://www.gilles.ch) 2023
