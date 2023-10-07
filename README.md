@@ -5,6 +5,9 @@ Install frontend
 - [Laravel Mix](https://laravel-mix.com  )
 - [Tailwind CSS](https://tailwindcss.com )
 - [BrowserSync](https://browsersync.io/)
+
+Rename and config `.env`
+
 ```
 npm i
 ```
