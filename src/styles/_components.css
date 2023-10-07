@@ -17,6 +17,7 @@
   /*** Layout ***/
   /* Center */
   .__center {
+    @apply w-full;
     @apply max-w-screen-xl;
     @apply mx-auto;
     @apply px-4;
