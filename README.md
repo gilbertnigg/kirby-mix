@@ -6,11 +6,11 @@ Install frontend
 - [Tailwind CSS](https://tailwindcss.com )
 - [BrowserSync](https://browsersync.io/)
 
-Rename and config `.env`
-
 ```
 npm i
 ```
+
+Rename and config `.env`
 
 Install backend
 - [Kirby CMS](https://getkirby.com  )
