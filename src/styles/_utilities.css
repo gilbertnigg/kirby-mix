@@ -5,6 +5,6 @@
 @layer utilities {
   /* Fix mobile height */
   .true-h-screen {
-    @apply h-screen supports-[height:100svh]:h-[100svh]
+    @apply h-screen supports-[height:100dvh]:h-[100dvh]
   }
 }
