@@ -3,6 +3,10 @@ title: Projekte
 options:
   delete: false
 
+navigation:
+  status: all
+  template: all
+
 columns:
   - width: 2/3
     sections:

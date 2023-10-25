@@ -1,6 +1,10 @@
 title: Default Page
 icon: page
 
+navigation:
+  status: all
+  template: all
+
 tabs:
   content:
     label: Inhalt

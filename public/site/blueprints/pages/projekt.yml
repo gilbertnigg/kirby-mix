@@ -1,6 +1,9 @@
 title: Projekt
 num: date
 
+navigation:
+  status: all
+
 columns:
   - width: 2/3
     sections:
