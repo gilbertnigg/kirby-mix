@@ -12,6 +12,7 @@ node_modules
 
 # Kirby files
 # ------------
+/public/composer.lock
 /public/kirby/*
 /public/vendor/*
 
@@ -58,3 +59,4 @@ Icon
 # License
 # ---------------
 /public/site/config/.license
+public/composer.lock
