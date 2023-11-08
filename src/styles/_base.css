@@ -34,13 +34,16 @@
   article ul {
     @apply list-disc;
     @apply list-outside;
-    @apply ml-5;
+    @apply ml-8;
     @apply mb-4;
+  }
+  article ul li p { /* Kirby fix */
+    @apply mb-0;
   }
   article ol {
     @apply list-decimal;
     @apply list-outside;
-    @apply ml-5;
+    @apply ml-8;
     @apply mb-4;
   }
   /* Inline elements */
