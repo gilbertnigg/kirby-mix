@@ -1,6 +1,6 @@
 @layer components {
   /* Nav ui */
-  header nav > ul {
+  nav > ul {
     @apply md:flex;
   }
   /* Navicon */
@@ -10,6 +10,7 @@
   }
   #navicon {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    @apply md:hidden;
   }
   #navicon .is-open {
     @apply block;
@@ -25,33 +26,34 @@
   }
 
   /*** Navigation utilities ***/
+  /* Responsive nav */
+  nav.is-responsive {
+    @apply max-md:hidden;
+  }
+  .is-nav-open nav.is-responsive {
+    @apply max-md:block;
+  }
   /* Dropdown nav */
-  nav.is-dropdown ul a {
-    @apply block;
-  }
-  nav.is-dropdown > ul {
-    @apply md:flex;
-  }
   nav.is-dropdown > ul > li {
-    @apply max-md:mb-4;
-    @apply md:mr-4;
     @apply md:relative;
   }
   nav.is-dropdown > ul > li > ul {
+    @apply max-md:block;
     @apply md:hidden;
     @apply md:absolute;
     @apply md:z-0;
-    @apply md:pt-4;
-    @apply md:-mx-4;
+    @apply md:-ml-4;
+    @apply md:p-4;
     @apply md:whitespace-nowrap;
-    @apply md:border-b border-primary;
     @apply md:bg-white;
+    @apply md:border md:border-primary;
   }
   nav.is-dropdown > ul > li > ul > li {
-    @apply md:px-4;
-    @apply md:border-l md:border-r md:border-primary;
-    @apply last:pb-4;
-    @apply md:bg-white;
+    @apply my-1;
+    @apply md:min-w-full;
+  }
+  nav.is-dropdown ul a {
+    @apply block;
   }
   @screen md {
     nav.is-dropdown > ul > li:hover > ul {
