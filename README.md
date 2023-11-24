@@ -1,10 +1,10 @@
 # Kirby-Mix
-### Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS
+## Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS
 
-Install frontend
-- [Laravel Mix](https://laravel-mix.com  )
-- [Tailwind CSS](https://tailwindcss.com )
-- [BrowserSync](https://browsersync.io/)
+### Install frontend
+- [Laravel Mix 6x](https://laravel-mix.com  )
+- [BrowserSync 2x](https://browsersync.io/)
+- [Tailwind CSS 3x](https://tailwindcss.com )
 
 ```
 npm i
@@ -12,14 +12,43 @@ npm i
 
 Rename and config `.env`
 
-Install backend
-- [Kirby CMS](https://getkirby.com  )
+### Install backend
+- [Kirby 4x](https://getkirby.com  )
 ```
 cd public
 composer install
 ```
 ---
-`npm run` scripts
+```
+cd ../
+```
+
+#### Kirby-Mix
+## Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS
+
+### Install frontend
+- [Laravel Mix 6x](https://laravel-mix.com  )
+- [BrowserSync 2x](https://browsersync.io/)
+- [Tailwind CSS 3x](https://tailwindcss.com )
+
+```
+npm i
+```
+
+Rename and config `.env`
+
+### Install backend
+- [Kirby 4x](https://getkirby.com  )
+```
+cd public
+composer install
+```
+---
+```
+cd ../
+```
+
+### `npm run` scripts
 
 watch
 ```
