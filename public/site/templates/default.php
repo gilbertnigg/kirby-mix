@@ -4,10 +4,10 @@
 
 <h1><?= $page->title() ?></h1>
 <?php if ($page->headline()->isNotEmpty()) : ?>
-	<h3><?= $page->headline()->kti() ?></h3>
+	<h2><?= $page->headline()->kti() ?></h2>
 <?php endif ?>
 
-<?php if ($cover) : ?>
+<?php if ($cover = $page->images()->template('cover')->first()) : ?>
 <p>
 	<img
 		srcset="<?= $cover->srcset([
@@ -20,24 +20,70 @@
 </p>
 <?php endif ?>
 
+
+<h2>Text</h2>
 <?= $page->text() ?>
 
-<?php foreach ($imgs as $img) : ?>
-<p>
-	<img src="<?= $img->thumb(['width'=>1600])->url() ?>" alt="<?= $img->alt() ?>">
-</p>
-<?php endforeach ?>
 
+<?php if ($page->images()->template('image')->count()) : ?>
 <hr>
-
-<?php foreach ($site->index()->template('projekt')->sortBy('date', 'desc') as $projekt) : ?>
-<h3><?= $projekt->title() ?></h3>
-<?php if ($img = $projekt->images()->template('cover')->first()) : ?>
-<p>
-	<img src="<?= $img->thumb(['width'=>400])->url() ?>" alt="<?= $img->alt()->or($projekt->title()) ?>">
-</p>
-<?php endif ?>
+<h2>Images</h2>
+<div class="__grid items-center">
+<?php foreach ($page->images()->template('image')->sortBy('sort', 'asc', 'filename', 'asc') as $img) : ?>
+	<div>
+		<img src="<?= $img->thumb(['width'=>1600])->url() ?>" alt="<?= $img->alt() ?>">
+	</div>
 <?php endforeach ?>
+</div>
+<?php endif ?>
+
+
+<?php if ($page->files()->template('file')->count()) : ?>
+<hr>
+<h2>Files</h2>
+<ul>
+	<?php foreach ($page->files()->template('file')->sortBy('sort', 'asc', 'filename', 'asc') as $file) : ?>
+	<li>
+		<a href="<?= $file->url() ?>" target="_blank" rel="noopener noreferrer">
+			<?= $file->description()->or($file->name()) ?>
+		</a>
+	</li>
+	<?php endforeach ?>
+</ul>
+<?php endif ?>
+
+
+<?php if ($pages->template('news')->children()->count()) : ?>
+<hr>
+<h2>News</h2>
+<div class="__grid">
+	<?php foreach ($pages->template('news')->children()->sortBy('date', 'desc')->listed() as $project) : ?>
+	<a href="<?= $project->url() ?>" class="group block no-underline bg-gray-200">
+		<?php if ($img = $project->images()->template('cover')->first()) : ?>
+		<img src="<?= $img->thumb(['width'=>800, 'height'=>600, 'crop'=>true])->url() ?>" class="transition-opacity group-hover:opacity-80" alt="<?= $img->alt()->or($project->title()) ?>">
+		<?php endif ?>
+		<span class="block p-4">
+			<h3><?= $project->title() ?></h3>
+			<?= $project->date()->toDate('Y.m.d') ?><br>
+			<?php if ($project->headline()->isNotEmpty()) : ?>
+			<?= $project->headline()->kti() ?>
+			<?php endif ?>
+		</span>
+	</a>
+	<?php endforeach ?>
+</div>
+<?php endif ?>
+
+<?php if ($page->blocks()->isNotEmpty()) : ?>
+<hr>
+<h2>Blocks</h2>
+<?php foreach ($page->blocks()->toBlocks() as $block) : ?>
+<div id="<?= $block->id() ?>" class="is-block-type-<?= $block->type() ?>">
+  <?= $block ?>
+</div>
+<hr>
+<?php endforeach ?>
+<?php endif ?>
 
 </article>
 

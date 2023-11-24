@@ -2,7 +2,7 @@
 
 return [
     'debug' => (
-		in_array($_SERVER['HTTP_HOST'], ['projects', 'testserver.com']) ? true : false
+		in_array($_SERVER['HTTP_HOST'], ['localhost', 'testserver.com']) ? true : false
 	),
 	'auth' => [
 		'methods' => ['password', 'password-reset']
@@ -13,8 +13,5 @@ return [
 		// 'css' => 'assets/css/custom-panel.css',
 		'favicon' => '/favicon.ico',
 		'slug' => 'admin'
-	],
-	'thumbs' => [ // fix png opacity, no ImageMagick on local MAMP default
-		'driver' => in_array($_SERVER['HTTP_HOST'], ['projects']) ? 'gd' : 'im'
 	],
 ];
