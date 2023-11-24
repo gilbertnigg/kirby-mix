@@ -26,9 +26,19 @@
   /* Grid */
   .__grid {
     @apply grid;
-    @apply grid-cols-2;
     @apply gap-4;
-    @apply md:grid-cols-4;
+    @apply grid-cols-1;
+    @apply md:grid-cols-2;
+    @apply lg:grid-cols-4;
+  }
+  .__grid.is-2 {
+    @apply grid-cols-1;
+    @apply md:grid-cols-2 lg:grid-cols-2;
+  }
+  .__grid.is-3 {
+    @apply grid-cols-1;
+    @apply md:grid-cols-2;
+    @apply lg:grid-cols-3;
   }
   .__grid > * {
     @apply auto-rows-fr;

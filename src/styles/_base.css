@@ -47,6 +47,10 @@
     @apply mb-4;
   }
   /* Inline elements */
+  article hr {
+    @apply my-8;
+    @apply text-primary;
+  }
   article a {
     @apply underline;
     @apply text-primary;
