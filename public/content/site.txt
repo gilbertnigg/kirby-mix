@@ -1,1 +1,17 @@
 Title: Site Title
+
+----
+
+Seo-title: Site title...
+
+----
+
+Seo-description: Site description...
+
+----
+
+Address: <p>Address...</p>
+
+----
+
+Color: #5b7795
