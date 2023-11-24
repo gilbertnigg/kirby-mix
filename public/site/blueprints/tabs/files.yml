@@ -1,0 +1,25 @@
+label: Dateien
+icon: attachment
+columns:
+  - width: 1/2
+    sections:
+      images:
+        headline: Bilder
+        type: files
+        template: image
+        info: "{{ file.alt }}"
+        sortable: false
+        image:
+          back: black
+  - width: 1/2
+    sections:
+      files:
+        headline: Dateien
+        type: files
+        template: file
+        info: "{{ file.caption }}"
+        sortable: false
+        sortBy: name asc
+        width: 1/2
+        image:
+          back: black

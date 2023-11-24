@@ -1,8 +1,8 @@
 title: Projekt
-num: date
+icon: star
 
-navigation:
-  status: all
+options:
+  move: false
 
 columns:
   - width: 2/3
@@ -16,7 +16,7 @@ columns:
             buttons: false
           text:
             label: Text
-            extends: sections/text
+            extends: fields/writer
   - width: 1/3
     sections:
       date:
@@ -26,7 +26,6 @@ columns:
             label: Datum
             type: date
             display: DD.MM.YYYY
-            required: true
       cover:
         headline: Cover
         type: files
@@ -37,9 +36,17 @@ columns:
           ratio: 3/2
           cover: true
           back: black
-      bilder:
+      images:
         headline: Bilder
         type: files
         template: image
+        image:
+          back: black
+      files:
+        headline: Dateien
+        type: files
+        template: file
+        sortable: false
+        sortBy: name asc
         image:
           back: black

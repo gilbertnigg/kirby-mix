@@ -4,7 +4,7 @@ accept:
   type: document, archive
 
 fields:
-  caption:
+  description:
     label: Beschreibung
     type: text
     width: 1/2

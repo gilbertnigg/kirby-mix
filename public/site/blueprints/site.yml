@@ -7,29 +7,69 @@ tabs:
     columns:
       - width: 2/3
         sections:
-          projekte:
+          projects:
             headline: Projekte
             type: pages
-            template: projekt
-            parent: site.find("projekt")
+            template: project
+            parent: site.find("projects")
+            create: project
             status: all
             image:
+              query: page.images.findBy("template", "cover")
+              cover: true
+              back: black
+          blog:
+            headline: News
+            type: pages
+            template: post
+            parent: site.find("news")
+            create: post
+            status: all
+            info: "{{ page.date.toDate('d.m.Y') }}"
+            image:
+              query: page.images.findBy("template", "cover")
+              cover: true
               back: black
       - width: 1/3
         sections:
           pages:
-            headline: Rubriken
+            headline: Seiten
             create:
               - default
-            image: false
             status: all
+            image:
+              query: icon
+              back: black
   seo:
     label: SEO
     icon: search
     columns:
       - width: 2/3
         fields:
-          extends: sections/seo
+          seo_title:
+            label: Seitentitel
+            type: text
+            help: 50 bis 60 Zeichen
+          seo_description:
+            label: Seitenbeschreibung
+            type: textarea
+            buttons: false
+            help: 100 bis 150 Zeichen
+          address:
+            label: Adresse
+            type: writer
+            nodes:
+              - heading
+              - bulletList
+            toolbar:
+              inline: false
+              nodes: false
+              marks:
+                - bold
+                - link
+                - email
+
+
       - width: 1/3
         sections:
           icon:
@@ -45,3 +85,9 @@ tabs:
               ratio: 1/1
               cover: true
               back: white
+          color:
+            type: fields
+            fields:
+              color:
+                label: Themenfarbe
+                type: color

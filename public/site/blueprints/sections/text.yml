@@ -1,7 +1,0 @@
-type: writer
-marks:
-  - bold
-  - email
-  - link
-nodes:
-  - bulletList

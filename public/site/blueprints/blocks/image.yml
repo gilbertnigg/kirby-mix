@@ -1,0 +1,34 @@
+name: field.blocks.image.name
+icon: image
+preview: image
+fields:
+  location:
+    label: field.blocks.image.location
+    type: radio
+    columns: 2
+    default: "kirby"
+    options:
+      kirby: Kirby
+      web: Web
+  image:
+    label: field.blocks.image.name
+    type: files
+    multiple: false
+    info: "{{ file.alt }}"
+    uploads: image
+    query: page.files.template("image")
+    image:
+      back: black
+    when:
+      location: kirby
+  src:
+    label: field.blocks.image.url
+    type: url
+    when:
+      location: web
+  alt:
+    label: field.blocks.image.alt
+    type: text
+    icon: title
+    when:
+      location: web

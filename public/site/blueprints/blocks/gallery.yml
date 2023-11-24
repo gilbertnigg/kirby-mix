@@ -1,0 +1,16 @@
+name: field.blocks.gallery.name
+icon: dashboard
+preview: gallery
+fields:
+  images:
+    label: field.blocks.gallery.images.label
+    type: files
+    multiple: true
+    layout: cards
+    size: small
+    empty: field.blocks.gallery.images.empty
+    info: "{{ file.alt }}"
+    uploads: image
+    query: page.files.template("image")
+    image:
+      back: black

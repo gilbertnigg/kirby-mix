@@ -1,0 +1,42 @@
+title: Blog
+icon: chat
+
+options:
+  delete: false
+  duplicate: false
+
+tabs:
+  content:
+    label: Seite
+    icon: document
+    columns:
+      - width: 2/3
+        sections:
+          content:
+            type: fields
+            fields:
+              headline:
+                label: Headline
+                type: textarea
+                buttons: false
+              text:
+                label: Text
+                extends: fields/writer
+      - width: 1/3
+        sections:
+          pages:
+            headline: Posts
+            status: all
+            info: "{{ page.date.toDate('d.m.Y') }}"
+            template: post
+            sortBy: date desc
+            image:
+              #query: page.images.sortBy("sort","asc", "filename","asc").first
+              query: page.images.findBy("template", "cover")
+              back: black
+              cover: true
+
+  files:
+    extends: tabs/files
+  seo:
+    extends: tabs/seo

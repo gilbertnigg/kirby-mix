@@ -1,0 +1,50 @@
+name: Repeater
+icon: copy
+preview: fields
+wysiwyg: true
+tabs:
+  main:
+    label: Inhalte
+    fields:
+      repeater:
+        label: Felder
+        type: blocks
+        fieldsets:
+          repeater_items:
+            wysiwyg: true
+            preview: fields
+            title: false
+            icon: paragraph
+            fields:
+              title:
+                label: Titel
+                type: text
+              text:
+                label: Text
+                type: writer
+                nodes: false
+                toolbar:
+                  inline: true
+                  marks:
+                    - bold
+                    - link
+
+  settings:
+    label: Einstellungen
+    fields:
+      border:
+        label: Rahmen
+        type: toggle
+        text: Zeige Rahmen
+        width: 1/2
+        default: true
+      columns:
+        label: Spalten
+        type: toggles
+        required: true
+        width: 1/2
+        default: 4
+        options:
+          - 2
+          - 3
+          - 4

@@ -1,0 +1,13 @@
+name: Downloads
+icon: attachment
+preview: fields
+wysiwyg: true
+fields:
+  files:
+    label: Dateien
+    type: files
+    info: "{{ file.description }}"
+    uploads: file
+    query: page.files.template("file")
+    image:
+      back: black

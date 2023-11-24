@@ -7,6 +7,7 @@ options:
   delete: false
   duplicate: false
   read: false
+  move: false
 
 sections:
   content:
@@ -14,8 +15,7 @@ sections:
     fields:
       headline:
         label: Headline
-        type: textarea
-        buttons: false
+        type: text
       text:
         label: Text
-        extends: sections/text
+        extends: fields/writer

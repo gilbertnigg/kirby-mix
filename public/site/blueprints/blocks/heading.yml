@@ -1,0 +1,20 @@
+name: Heading
+icon: title
+preview: heading
+wysiwyg: true
+fields:
+  level:
+    label: field.blocks.heading.level
+    type: select
+    empty: false
+    default: "h2"
+    width: 1/6
+    options:
+      - h2
+      - h3
+  text:
+    label: field.blocks.heading.text
+    type: text
+    counter: false
+    width: 5/6
+    placeholder: field.blocks.heading.placeholder
