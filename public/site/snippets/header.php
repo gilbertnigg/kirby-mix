@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title><?= $site->seo_title()->or($site->title()).(!$page->isHomePage() ? ' - '.$page->title() : '') ?></title>
 <script>
-document.documentElement.classList.remove('no-js');
-document.documentElement.classList.add('is-js');
+document.documentElement.classList.replace('no-js', 'is-js');
 </script>
 <meta name="description" content="<?= $page->seo_description()->or($site->seo_description()) ?>">
 <meta property="og:title" content="<?= $site->seo_title()->or($site->title()).(!$page->isHomePage() ? ' - '.$page->title() : '') ?>">
