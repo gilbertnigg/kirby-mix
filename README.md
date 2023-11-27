@@ -1,6 +1,11 @@
 # Kirby-Mix
 ## Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS
 
+```
+git clone --depth 1 https://github.com/gilbertnigg/kirby-mix.git project
+rm -rf ./project/.git
+```
+
 ### Install frontend
 - [Laravel Mix 6x](https://laravel-mix.com  )
 - [BrowserSync 2x](https://browsersync.io/)
