@@ -2,9 +2,12 @@ label: Inhalte
 type: blocks
 fieldsets:
   - heading
+  - lead
   - text
   - image
+  - text-image
   - gallery
   - video
   - downloads
+  - structure
   - repeater

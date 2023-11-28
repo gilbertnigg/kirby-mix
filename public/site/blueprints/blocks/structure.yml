@@ -1,0 +1,33 @@
+name: Spalten
+icon: grid
+preview: fields
+wysiwyg: true
+fields:
+  title:
+    label: Titel
+    type: text
+    width: 3/4
+  columns:
+    label: Spalten
+    type: toggles
+    required: true
+    width: 1/4
+    default: 4
+    options:
+      - 2
+      - 3
+      - 4
+  structure:
+    label: Felder
+    type: structure
+    columns:
+      title: true
+    fields:
+      title:
+        label: Titel
+        type: text
+        required: true
+      text:
+        extends: fields/writer
+      image:
+        extends: fields/image
