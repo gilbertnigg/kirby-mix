@@ -9,7 +9,8 @@ nodes:
 toolbar:
   inline: false
   marks:
-    - bold
-    - '|'
     - link
+    - email
+    - '|'
+    - bold
     - clear
