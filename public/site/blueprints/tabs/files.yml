@@ -1,4 +1,4 @@
-label: Dateien
+label: Dateiablage
 icon: attachment
 columns:
   - width: 1/2
@@ -14,7 +14,7 @@ columns:
   - width: 1/2
     sections:
       files:
-        headline: Dateien
+        headline: Dokumente
         type: files
         template: file
         info: "{{ file.caption }}"
