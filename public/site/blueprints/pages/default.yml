@@ -33,7 +33,7 @@ tabs:
           pages:
             headline: Seiten
             type: pages
-            template: rubrik
+            template: default
             image:
               back: black
           images:
