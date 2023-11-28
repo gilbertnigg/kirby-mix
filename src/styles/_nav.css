@@ -1,9 +1,44 @@
 @layer components {
-  /* Nav ui */
-  nav > ul {
+  /*** Nav main ***/
+  #nav-main > ul {
     @apply md:flex;
   }
-  /* Navicon */
+  /* Responsive nav */
+  #nav-main.is-responsive {
+    @apply max-md:hidden;
+  }
+  .is-nav-open #nav-main.is-responsive {
+    @apply max-md:block;
+  }
+  /* Dropdown nav */
+  #nav-main.is-dropdown > ul > li {
+    @apply md:relative;
+  }
+  #nav-main.is-dropdown > ul > li > ul {
+    @apply max-md:block;
+    @apply md:hidden;
+    @apply md:absolute;
+    @apply md:z-0;
+    @apply md:-ml-4;
+    @apply md:p-4;
+    @apply md:whitespace-nowrap;
+    @apply md:bg-white;
+    @apply md:border md:border-primary;
+  }
+  #nav-main.is-dropdown > ul > li > ul > li {
+    @apply my-1;
+    @apply md:min-w-full;
+  }
+  #nav-main.is-dropdown ul a {
+    @apply block;
+  }
+  @screen md {
+    #nav-main.is-dropdown > ul > li:hover > ul {
+      @apply block;
+    }
+  }
+
+  /*** Navicon ***/
   :root.is-nav-open,
   :root.is-nav-open body {
     @apply overflow-hidden;
@@ -23,41 +58,5 @@
   }
   .is-nav-open #navicon .is-closed {
     @apply block;
-  }
-
-  /*** Navigation utilities ***/
-  /* Responsive nav */
-  nav.is-responsive {
-    @apply max-md:hidden;
-  }
-  .is-nav-open nav.is-responsive {
-    @apply max-md:block;
-  }
-  /* Dropdown nav */
-  nav.is-dropdown > ul > li {
-    @apply md:relative;
-  }
-  nav.is-dropdown > ul > li > ul {
-    @apply max-md:block;
-    @apply md:hidden;
-    @apply md:absolute;
-    @apply md:z-0;
-    @apply md:-ml-4;
-    @apply md:p-4;
-    @apply md:whitespace-nowrap;
-    @apply md:bg-white;
-    @apply md:border md:border-primary;
-  }
-  nav.is-dropdown > ul > li > ul > li {
-    @apply my-1;
-    @apply md:min-w-full;
-  }
-  nav.is-dropdown ul a {
-    @apply block;
-  }
-  @screen md {
-    nav.is-dropdown > ul > li:hover > ul {
-      @apply block;
-    }
   }
 }

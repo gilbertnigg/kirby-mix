@@ -1,19 +1,33 @@
 </main>
 
-<footer class="py-8 mt-16 bg-primary text-white">
-	<article class="__center md:flex">
-		<?php if ($site->address()) : ?>
-		<div>
-			<?= $site->address() ?>
+<footer class="py-8 mt-16 bg-primary">
+	<div class="__center text-white [&_a]:text-white md:flex md:justify-items-start">
+		<div class="flex-1 flex space-x-4">
+			<?php if ($site->footer_address()) : ?>
+			<address class="not-italic">
+				<?= $site->footer_address() ?>
+			</address>
+			<?php endif ?>
+			<?php if ($site->footer_links()->isNotEmpty()) : ?>
+			<nav id="nav-footer">
+				<ul>
+				<?php foreach ($site->footer_links()->toPages() as $link) : ?>
+					<li class="<?= ($link === $page ? 'is-selected' : '') ?>">
+						<?= $link->title()->link() ?>
+					</li>
+				<?php endforeach ?>
+				</ul>
+			</nav>
+			<?php endif ?>
 		</div>
-		<?php endif ?>
-		<p>
-			Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-		<p>
-		<p>
-			Etiam porta sem malesuada magna mollis euismod maecenas faucibus mollis interdum.
-		</p>
-	</article>
+		<div>
+			<p>
+				...<br>
+				..<br>
+				.
+			</p>
+		</div>
+	</div>
 </footer>
 
 </body>

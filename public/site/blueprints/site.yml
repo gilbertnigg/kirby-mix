@@ -40,6 +40,29 @@ tabs:
             image:
               query: icon
               back: black
+  footer:
+    label: Footer
+    icon: text
+    columns:
+      - width: 2/3
+        fields:
+          footer_links:
+            label: Links
+            type: pages
+            image:
+              query: icon
+              back: black
+          footer_address:
+            label: Adresse
+            type: writer
+            nodes: false
+            toolbar:
+              inline: false
+              nodes: false
+              marks:
+                - bold
+                - link
+                - email
   seo:
     label: SEO
     icon: search
@@ -55,21 +78,6 @@ tabs:
             type: textarea
             buttons: false
             help: 100 bis 150 Zeichen
-          address:
-            label: Adresse
-            type: writer
-            nodes:
-              - heading
-              - bulletList
-            toolbar:
-              inline: false
-              nodes: false
-              marks:
-                - bold
-                - link
-                - email
-
-
       - width: 1/3
         sections:
           icon:
