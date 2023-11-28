@@ -6,8 +6,10 @@ options:
   changeStatus: false
   delete: false
   duplicate: false
-  read: false
   move: false
+  read:
+    admin: true
+    editor: false
 
 sections:
   content:
