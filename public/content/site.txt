@@ -2,16 +2,8 @@ Title: Site Title
 
 ----
 
-Seo-title: Site title...
+Footer-links: - page://8IfZ0zjkNa03xQqq
 
 ----
 
-Seo-description: Site description...
-
-----
-
-Address: <p>Address...</p>
-
-----
-
-Color: #5b7795
+Footer-address: <p><strong>Nulla vitae elit libero</strong><br>Pharetra augue<br>Morbi leo risus</p><p><a href="#">Porta ac consectetur</a></p>

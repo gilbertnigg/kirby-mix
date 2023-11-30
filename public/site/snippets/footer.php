@@ -2,7 +2,7 @@
 
 <footer class="py-8 mt-16 bg-primary">
 	<div class="__center text-white [&_a]:text-white md:flex md:justify-items-start">
-		<div class="flex-1 flex space-x-4">
+		<div class="md:flex-1 md:flex md:space-x-4">
 			<?php if ($site->footer_address()) : ?>
 			<address class="not-italic">
 				<?= $site->footer_address() ?>
