@@ -1,12 +1,51 @@
-name: field.blocks.video.name
+name: Video
 icon: video
-preview: video
+preview: fields
+wysiwyg: true
 fields:
+  location:
+    label: field.blocks.image.location
+    type: toggles
+    default: "kirby"
+    grow: false
+    required: true
+    options:
+      - value: kirby
+        text: Kirby
+        icon: video
+      - value: web
+        text: Web
+        icon: display
+  video:
+    label: Video
+    type: files
+    multiple: false
+    info: "{{ file.caption }}"
+    uploads: video
+    query: page.files.template("video")
+    image:
+      back: black
+    when:
+      location: kirby
+  settings:
+    label: Optionen
+    type: checkboxes
+    columns: 3
+    options:
+      muted: Muted
+      autoplay: Autoplay
+      controls: Controls
+    when:
+      location: kirby
   url:
     label: field.blocks.video.url.label
     type: url
     placeholder: field.blocks.video.url.placeholder
+    when:
+      location: web
   caption:
-    label: field.blocks.video.caption
-    type: writer
-    inline: true
+    label: Caption
+    type: text
+    counter: false
+    when:
+      location: web

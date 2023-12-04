@@ -1,13 +1,25 @@
 label: Inhalte
 type: blocks
 fieldsets:
-  - heading
-  - lead
-  - text
-  - image
-  - text-image
-  - gallery
-  - video
-  - downloads
-  - structure
-  - repeater
+  text:
+    label: Text
+    type: group
+    fieldsets:
+      - heading
+      - lead
+      - text
+  media:
+    label: Medien
+    type: group
+    fieldsets:
+      - image
+      - gallery
+      - video
+      - downloads
+  blocks:
+    label: Elemente
+    type: group
+    fieldsets:
+      - text-image
+      - structure
+      - repeater

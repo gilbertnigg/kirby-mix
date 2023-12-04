@@ -1,11 +1,10 @@
-name: Lead
-icon: headline
+name: field.blocks.text.name
+icon: text
 wysiwyg: true
 preview: fields
 fields:
   text:
     label: Text
-    type: textarea
-    buttons: false
+    extends: fields/writer
     required: true
     placeholder: field.blocks.text.placeholder

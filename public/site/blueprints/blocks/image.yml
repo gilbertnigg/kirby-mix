@@ -4,21 +4,19 @@ preview: image
 fields:
   location:
     label: field.blocks.image.location
-    type: radio
-    columns: 2
+    type: toggles
     default: "kirby"
+    grow: false
+    required: true
     options:
-      kirby: Kirby
-      web: Web
+      - value: kirby
+        text: Kirby
+        icon: image
+      - value: web
+        text: Web
+        icon: display
   image:
-    label: field.blocks.image.name
-    type: files
-    multiple: false
-    info: "{{ file.alt }}"
-    uploads: image
-    query: page.files.template("image")
-    image:
-      back: black
+    extends: fields/image
     when:
       location: kirby
   src:

@@ -8,10 +8,14 @@ fields:
   image:
     extends: fields/image
     width: 2/3
-  imgpos:
-    type: toggle
+  image_position:
+    type: toggles
     label: Bildposition
     width: 1/3
-    text:
-      - links
-      - rechts
+    required: true
+    default: left
+    options:
+      - value: left
+        text: Links
+      - value: right
+        text: Rechts
