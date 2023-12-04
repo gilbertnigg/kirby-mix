@@ -1,0 +1,10 @@
+title: Video
+
+accept:
+  mime: video/mp4
+
+fields:
+  caption:
+    label: Caption
+    type: text
+    width: 1/2
