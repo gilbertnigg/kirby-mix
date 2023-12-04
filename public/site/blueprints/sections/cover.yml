@@ -1,0 +1,8 @@
+headline: Cover
+type: files
+template: cover
+sortable: false
+max: 1
+layout: cards
+image:
+  back: black
