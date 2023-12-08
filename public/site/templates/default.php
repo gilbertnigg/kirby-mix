@@ -57,7 +57,7 @@
 <hr>
 <h2>News</h2>
 <div class="__grid">
-	<?php foreach ($pages->template('news')->children()->sortBy('date', 'desc')->listed() as $project) : ?>
+	<?php foreach ($pages->template('news')->children()->not($page)->sortBy('date', 'desc')->listed() as $project) : ?>
 	<a href="<?= $project->url() ?>" class="group block no-underline bg-gray-200">
 		<?php if ($img = $project->images()->template('cover')->first()) : ?>
 		<img src="<?= $img->thumb(['width'=>800, 'height'=>600, 'crop'=>true])->url() ?>" class="transition-opacity group-hover:opacity-80" alt="<?= $img->alt()->or($project->title()) ?>">
