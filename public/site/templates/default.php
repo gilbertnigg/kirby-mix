@@ -53,7 +53,7 @@
 <?php endif ?>
 
 
-<?php if ($pages->template('news')->children()->count()->not($page)) : ?>
+<?php if ($pages->template('news')->children()->not($page)->count()) : ?>
 <hr>
 <h2>News</h2>
 <div class="__grid">
