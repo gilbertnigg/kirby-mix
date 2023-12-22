@@ -13,7 +13,7 @@ tabs:
           repeater_items:
             wysiwyg: true
             preview: fields
-            title: false
+            title: Block
             icon: paragraph
             fields:
               title:
@@ -35,14 +35,15 @@ tabs:
       border:
         label: Rahmen
         type: toggle
+        width: 1/3
         text: Zeige Rahmen
-        width: 1/2
         default: true
       columns:
         label: Spalten
-        type: toggles
+        type: radio
+        width: 2/3
+        columns: 3
         required: true
-        width: 1/2
         default: 4
         options:
           - 2

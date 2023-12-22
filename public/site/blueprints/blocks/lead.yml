@@ -3,9 +3,14 @@ icon: headline
 wysiwyg: true
 preview: fields
 fields:
-  text:
-    label: Text
-    type: textarea
-    buttons: false
-    required: true
+  lead:
+    label: false
+    type: writer
     placeholder: field.blocks.text.placeholder
+    inline: true
+    nodes: false
+    toolbar:
+      inline: true
+      marks:
+        - link
+        - email

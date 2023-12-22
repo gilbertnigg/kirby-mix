@@ -4,7 +4,6 @@ wysiwyg: true
 preview: fields
 fields:
   text:
-    label: Text
+    label: false
     extends: fields/writer
-    required: true
     placeholder: field.blocks.text.placeholder
