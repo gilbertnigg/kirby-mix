@@ -1,6 +1,10 @@
 title: Standardseite
 icon: page
 
+navigation:
+  status: all
+  template: all
+
 tabs:
   content:
     label: Seite
