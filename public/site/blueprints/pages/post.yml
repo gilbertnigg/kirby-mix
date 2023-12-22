@@ -20,6 +20,8 @@ columns:
             extends: fields/writer
   - width: 1/3
     sections:
+      cover:
+        extends: sections/cover
       date:
         type: fields
         fields:
@@ -29,16 +31,14 @@ columns:
             display: DD.MM.YYYY
             default: today
             required: true
-      cover:
-        extends: sections/cover
       images:
-        headline: Bilder
+        headline: Bildergalerie
         type: files
         template: image
         image:
           back: black
       files:
-        headline: Dateien
+        headline: Downloads
         type: files
         template: file
         info: '{{ file.caption }}'

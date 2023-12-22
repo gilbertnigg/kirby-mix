@@ -4,5 +4,6 @@ template: cover
 sortable: false
 max: 1
 layout: cards
+info: "{{ file.alt }}"
 image:
   back: black

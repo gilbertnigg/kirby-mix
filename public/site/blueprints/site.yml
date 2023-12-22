@@ -42,16 +42,10 @@ tabs:
               back: black
   footer:
     label: Footer
-    icon: text
+    icon: text-left
     columns:
-      - width: 2/3
+      - width: 1/2
         fields:
-          footer_links:
-            label: Links
-            type: pages
-            image:
-              query: icon
-              back: black
           footer_address:
             label: Adresse
             type: writer
@@ -63,6 +57,23 @@ tabs:
                 - bold
                 - link
                 - email
+      - width: 1/2
+        sections:
+          footer_pages:
+            headline: Seiten
+            type: pages
+            status: all
+            template: footer
+            image:
+              query: icon
+              back: black
+          footer_some:
+            label: Social Media
+            type: files
+            template: logo-some
+            info: "{{ file.title }}"
+            image:
+              back: black
   seo:
     label: SEO
     icon: search
