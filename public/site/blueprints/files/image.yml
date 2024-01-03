@@ -4,6 +4,9 @@ accept:
   mime: image/jpeg, image/png, image/gif
   type: image
 
+options:
+  changeTemplate: false
+
 fields:
   alt:
     label: Alternativtext

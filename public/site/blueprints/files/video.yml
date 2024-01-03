@@ -3,6 +3,9 @@ title: Video
 accept:
   mime: video/mp4
 
+options:
+  changeTemplate: false
+
 fields:
   caption:
     label: Caption
