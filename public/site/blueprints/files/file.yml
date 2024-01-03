@@ -3,6 +3,9 @@ title: Datei
 accept:
   type: document, archive
 
+options:
+  changeTemplate: false
+
 fields:
   description:
     label: Beschreibung
