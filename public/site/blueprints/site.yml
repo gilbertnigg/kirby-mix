@@ -11,7 +11,8 @@ tabs:
             headline: Projekte
             type: pages
             template: project
-            parent: site.find("projects")
+            # parent: site.find("projects")
+            parent: site.index.findBy("intendedTemplate", "projects")
             create: project
             status: all
             image:
@@ -22,7 +23,7 @@ tabs:
             headline: News
             type: pages
             template: post
-            parent: site.find("news")
+            parent: site.index.findBy("intendedTemplate", "news")
             create: post
             status: all
             info: "{{ page.date.toDate('d.m.Y') }}"
