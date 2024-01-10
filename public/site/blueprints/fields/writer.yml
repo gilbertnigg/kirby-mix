@@ -13,4 +13,5 @@ toolbar:
     - email
     - '|'
     - bold
+    - '|'
     - clear
