@@ -44,3 +44,5 @@ columns:
         info: '{{ file.caption }}'
         sortable: false
         sortBy: name asc
+        image:
+          back: black
