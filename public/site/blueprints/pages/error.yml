@@ -7,7 +7,7 @@ options:
   delete: false
   duplicate: false
   move: false
-  read:
+  list:
     admin: true
     editor: false
 
@@ -15,9 +15,6 @@ sections:
   content:
     type: fields
     fields:
-      headline:
-        label: Headline
-        type: text
       text:
         label: Text
         extends: fields/writer
