@@ -8,10 +8,10 @@
 				<?= $site->footer_address() ?>
 			</address>
 			<?php endif ?>
-			<?php if ($site->footer_links()->toPages()->count()) : ?>
+			<?php if ($site->footer_pages()->toPages()->count()) : ?>
 			<nav id="nav-footer">
 				<ul>
-				<?php foreach ($site->footer_links()->toPages() as $link) : ?>
+				<?php foreach ($site->footer_pages()->toPages() as $link) : ?>
 					<li class="<?= e($link === $page, 'is-selected') ?>">
 						<?= $link->title()->link() ?>
 					</li>
