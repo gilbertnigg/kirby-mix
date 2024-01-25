@@ -8,10 +8,10 @@
 				<?= $site->footer_address() ?>
 			</address>
 			<?php endif ?>
-			<?php if ($site->footer_pages()->toPages()->count()) : ?>
+			<?php if ($site->children()->template('footer-index')->first()->children()->template('footer')->listed()->count()) : ?>
 			<nav id="nav-footer">
 				<ul>
-				<?php foreach ($site->footer_pages()->toPages() as $link) : ?>
+				<?php foreach ($site->children()->template('footer-index')->first()->children()->template('footer')->listed() as $link) : ?>
 					<li class="<?= e($link === $page, 'is-selected') ?>">
 						<?= $link->title()->link() ?>
 					</li>
