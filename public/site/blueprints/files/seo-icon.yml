@@ -4,7 +4,7 @@ accept:
   mime: image/jpeg, image/png, image/gif
   type: image
 
-# no additional infos
+# no additional fields
 fields:
   hidden:
     type: hidden
