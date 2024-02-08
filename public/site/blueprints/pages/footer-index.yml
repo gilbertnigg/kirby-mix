@@ -1,0 +1,28 @@
+title: Meta Index
+icon: info
+
+options:
+  delete: false
+  duplicate: false
+  list: false
+
+tabs:
+  content:
+    label: Seite
+    icon: document
+    columns:
+      - width: 2/3
+        sections:
+          pages:
+            headline: Seiten
+            create:
+              - default
+            status: all
+            image:
+              query: icon
+              back: black
+
+  files:
+    extends: tabs/files
+  seo:
+    extends: tabs/seo
