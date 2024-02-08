@@ -26,6 +26,7 @@ tabs:
             parent: site.index.findBy("intendedTemplate", "news")
             create: post
             status: all
+            sortBy: date desc
             info: "{{ page.date.toDate('d.m.Y') }}"
             image:
               query: page.images.findBy("template", "cover")
