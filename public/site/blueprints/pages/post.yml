@@ -42,7 +42,12 @@ columns:
         type: files
         template: file
         info: '{{ file.caption }}'
-        sortable: false
-        sortBy: name asc
         image:
           back: black
+      videos:
+        headline: Videos
+        type: files
+        template: video
+        image:
+          back: black
+
