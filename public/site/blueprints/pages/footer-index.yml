@@ -4,7 +4,6 @@ icon: info
 options:
   delete: false
   duplicate: false
-  list: false
 
 tabs:
   content:
