@@ -36,6 +36,8 @@ tabs:
         sections:
           pages:
             headline: Seiten
+            templatesIgnore:
+              - footer-index
             create:
               - default
             status: all
