@@ -2,19 +2,7 @@ name: field.blocks.image.name
 icon: image
 wysiwyg: true
 preview: image
-tabs:
-  main:
-    label: Inhalte
-    fields:
-      background:
-        label: Hintergrund
-        type: toggles
-        required: true
-        width: 1/3
-        default: light
-        options:
-          light: hell
-          dark: dunkel
-      image:
-        extends: fields/image
-        width: 2/3
+fields:
+  image:
+    label: field.blocks.image.name
+    extends: fields/image

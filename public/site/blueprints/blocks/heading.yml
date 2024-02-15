@@ -1,21 +1,25 @@
-name: Heading
+name: Überschrift
 icon: title
-preview: heading
 wysiwyg: true
+preview: heading
 fields:
-  level:
-    label: field.blocks.heading.level
-    type: select
-    empty: false
-    default: "h2"
-    width: 1/6
-    options:
-      - h1
-      - h2
-      - h3
   text:
     label: field.blocks.heading.text
-    type: text
-    counter: false
-    width: 5/6
+    type: writer
+    inline: true
     placeholder: field.blocks.heading.placeholder
+
+  level:
+    label: field.blocks.heading.level
+    type: toggles
+    empty: false
+    default: "h2"
+    grow: false
+    labels: false
+    options:
+      - value: h2
+        icon: h2
+        text: H2
+      - value: h3
+        icon: h3
+        text: H3
