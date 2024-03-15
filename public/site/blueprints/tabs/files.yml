@@ -1,33 +1,24 @@
 label: Dateiablage
 icon: attachment
 columns:
-  - width: 1/3
+  - width: 1/2
     sections:
       images:
         headline: Bilder
         type: files
-        template: image
+        templates:
+          - image
+          - video
         info: "{{ file.alt }}"
         sortable: false
         image:
           back: black
-  - width: 1/3
+  - width: 1/2
     sections:
       files:
         headline: Dokumente
         type: files
         template: file
-        info: "{{ file.caption }}"
-        sortable: false
-        sortBy: name asc
-        image:
-          back: black
-  - width: 1/3
-    sections:
-      videos:
-        headline: Videos
-        type: files
-        template: video
         info: "{{ file.caption }}"
         sortable: false
         sortBy: name asc
