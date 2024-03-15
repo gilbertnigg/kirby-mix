@@ -1,19 +1,15 @@
-<?php
+<?php /** @var \Kirby\Cms\Block $block */ ?>
 
-/** @var \Kirby\Cms\Block $block */
-$alt     = $block->alt();
-$src     = null;
-
-if ($block->location() == 'web') {
-    $src = $block->src()->esc();
-} elseif ($image = $block->image()->toFile()) {
-    $alt = $alt->or($image->alt());
-    $src = $image->url();
-}
-
-?>
-<?php if ($src): ?>
+<?php if ($image = $block->image()->toFile()) : ?>
 <figure>
-	<img src="<?= $src ?>" alt="<?= $alt->esc() ?>">
+	<picture>
+		<img
+		srcset="<?= $cover->srcset([
+			'800w'  => ['width' => 800, 'format' => 'webp'],
+			'1600w'  => ['width' => 1600, 'format' => 'webp'],
+		])?>"
+		sizes="(min-width: 1000px) 100vw"
+		src="<?= $image->resize(1600)->url() ?>" alt="<?= $image->alt()->esc()->or($page->title()) ?>">
+	</picture>
 </figure>
 <?php endif ?>
