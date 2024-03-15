@@ -19,7 +19,7 @@ tabs:
               query: page.images.findBy("template", "cover")
               cover: true
               back: black
-          blog:
+          news:
             headline: News
             type: pages
             template: post
