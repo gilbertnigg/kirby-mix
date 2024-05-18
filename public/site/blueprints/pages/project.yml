@@ -41,7 +41,7 @@ columns:
         headline: Downloads
         type: files
         template: file
-        info: '{{ file.caption }}'
+        info: '{{ file.description }}'
         image:
           back: black
       videos:

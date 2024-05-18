@@ -7,7 +7,7 @@ columns:
         headline: Dokumente
         type: files
         template: file
-        info: "{{ file.caption }}"
+        info: "{{ file.description }}"
         sortable: false
         sortBy: name asc
         image:
@@ -28,7 +28,7 @@ columns:
         headline: Videos
         type: files
         template: video
-        info: "{{ file.caption }}"
+        info: "{{ file.description }}"
         sortable: false
         sortBy: name asc
         image:
