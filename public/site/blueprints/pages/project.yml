@@ -1,6 +1,9 @@
 title: Projekt
 icon: star
 
+navigation:
+  status: all
+
 options:
   move: false
 
