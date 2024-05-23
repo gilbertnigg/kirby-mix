@@ -4,7 +4,7 @@
 <figure>
 	<picture>
 		<img
-		srcset="<?= $cover->srcset([
+		srcset="<?= $image->srcset([
 			'800w'  => ['width' => 800, 'format' => 'webp'],
 			'1600w'  => ['width' => 1600, 'format' => 'webp'],
 		])?>"
