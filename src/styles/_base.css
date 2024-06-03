@@ -49,7 +49,7 @@
   /* Inline elements */
   article hr {
     @apply my-8;
-    @apply text-primary;
+    @apply border-primary;
   }
   article a {
     @apply underline;
