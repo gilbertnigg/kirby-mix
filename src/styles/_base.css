@@ -27,6 +27,10 @@
     @apply mb-4;
     @apply text-lg;
   }
+  h3 {
+    @apply mb-4;
+    @apply font-bold;
+  }
   /* Block elements */
   article p {
     @apply mb-4;
