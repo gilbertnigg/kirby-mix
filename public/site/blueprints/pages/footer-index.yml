@@ -21,7 +21,5 @@ tabs:
               query: icon
               back: black
 
-  files:
-    extends: tabs/files
   seo:
     extends: tabs/seo
