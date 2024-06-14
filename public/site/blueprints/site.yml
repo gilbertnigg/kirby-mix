@@ -80,6 +80,6 @@ tabs:
           theme_color:
             type: fields
             fields:
-              color:
+              theme_color:
                 label: Themenfarbe
                 type: color
