@@ -8,8 +8,8 @@ use Kirby\Cms\Html;
 	<?= $video ?>
 	<?php if ($block->caption()->isNotEmpty()): ?>
 	<figcaption><?= $block->caption() ?></figcaption>
-	<?php endif ?>
 </figure>
+<?php endif ?>
 <?php elseif ($video = $block->video()->toFile()) : ?>
 <figure class="block">
 	<video src="<?= $video->url() ?>" class="w-full"
