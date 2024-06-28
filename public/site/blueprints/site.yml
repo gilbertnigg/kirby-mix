@@ -71,11 +71,22 @@ tabs:
             multiple: false
             sortable: false
             max: 1
-            layout: cards
+            layout: cardlets
             help: 1500×1500 Pixel
             image:
               ratio: 1/1
               cover: true
+              back: white
+          image_some:
+            headline: Social Media Bild
+            type: files
+            template: seo-image
+            multiple: false
+            sortable: false
+            max: 1
+            layout: cardlets
+            help: 1200×630 Pixel
+            image:
               back: white
           theme_color:
             type: fields
