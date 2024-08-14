@@ -6,10 +6,10 @@
 @layer base {
   /*** Defaults ***/
   html {
-    @apply text-base;
     @apply text-body;
   }
   body {
+    @apply text-base;
     @apply bg-gray-100;
   }
   main {
