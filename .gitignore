@@ -9,11 +9,11 @@ node_modules
 # Content files
 # ------------
 /public/content/*
-!/public/content/aktuell
-!/public/content/error
-!/public/content/meta
-!/public/content/projekte
-!/public/content/site.txt
+# !/public/content/aktuell
+# !/public/content/error
+# !/public/content/meta
+# !/public/content/projekte
+# !/public/content/site.txt
 
 # Kirby files
 # ------------
