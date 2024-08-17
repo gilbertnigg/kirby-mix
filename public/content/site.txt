@@ -1,9 +1,1 @@
 Title: Site Title
-
-----
-
-Footer-links: - page://8IfZ0zjkNa03xQqq
-
-----
-
-Footer-address: <p><strong>Nulla vitae elit libero</strong><br>Pharetra augue<br>Morbi leo risus</p><p><a href="#">Porta ac consectetur</a></p>
