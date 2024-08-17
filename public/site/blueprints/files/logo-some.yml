@@ -1,0 +1,18 @@
+title: Logo Social Media
+
+accept:
+  mime: image/jpeg, image/png, image/svg+xml
+  type: image
+
+fields:
+  title:
+    label: Name
+    type: text
+    required: true
+    width: 1/2
+  weblink:
+    label: Link
+    type: url
+    required: true
+    width: 1/2
+

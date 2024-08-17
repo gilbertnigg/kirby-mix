@@ -6,20 +6,11 @@ fieldsets:
     type: group
     fieldsets:
       - heading
-      - lead
       - text
   media:
     label: Medien
     type: group
     fieldsets:
       - image
-      - gallery
       - video
       - downloads
-  blocks:
-    label: Elemente
-    type: group
-    fieldsets:
-      - text-image
-      - structure
-      - repeater

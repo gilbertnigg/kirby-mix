@@ -1,7 +1,7 @@
 name: field.blocks.text.name
 icon: text
 wysiwyg: true
-preview: fields
+preview: text
 fields:
   text:
     label: false

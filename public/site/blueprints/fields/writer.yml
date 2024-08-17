@@ -10,7 +10,7 @@ toolbar:
   inline: false
   marks:
     - link
-    - email
     - '|'
     - bold
+    - '|'
     - clear

@@ -1,4 +1,4 @@
-title: Post
+title: News Artikel
 icon: chat
 num: date
 
@@ -41,6 +41,13 @@ columns:
         headline: Downloads
         type: files
         template: file
-        info: '{{ file.caption }}'
-        sortable: false
-        sortBy: name asc
+        info: '{{ file.description }}'
+        image:
+          back: black
+      videos:
+        headline: Videos
+        type: files
+        template: video
+        image:
+          back: black
+

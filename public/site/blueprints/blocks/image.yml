@@ -1,20 +1,29 @@
 name: field.blocks.image.name
 icon: image
+preview: fields
 wysiwyg: true
-preview: image
 tabs:
   main:
-    label: Inhalte
+    label: Bild
     fields:
-      background:
-        label: Hintergrund
-        type: toggles
-        required: true
-        width: 1/3
-        default: light
-        options:
-          light: hell
-          dark: dunkel
       image:
         extends: fields/image
-        width: 2/3
+        width: 1/1
+        layout: cards
+        size: xlarge
+        image:
+          ratio: 16/9
+          back: white
+  settings:
+    label: Darstellung
+    fields:
+      image_size:
+        label: Bildgrösse
+        type: toggles
+        required: true
+        default: lg
+        grow: false
+        options:
+          sm: klein
+          md: mittel
+          lg: gross

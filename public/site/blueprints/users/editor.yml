@@ -3,6 +3,11 @@ panel: true
 permissions:
   site: true
   users: false
+
+  access:
+    system: false
+    users: false
+
   user:
     changeRole: false
     changeName: false

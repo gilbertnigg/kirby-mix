@@ -21,15 +21,19 @@ document.documentElement.classList.replace('no-js', 'is-js');
 	<link rel="icon" type="<?= $seoIcon->mime() ?>" href="<?= $seoIcon->crop(96, 96)->url() ?>" sizes="96x96">
 	<link rel="apple-touch-icon" href="<?= $seoIcon->crop(180, 180)->url() ?>" sizes="180x180">
 <?php endif ?>
-<?php if ($seoImage = $seoImage ?? $seoIcon) : ?>
-    <link rel="image_src" href="<?= $seoImage->crop(1500, 1500)->url() ?>">
-    <meta property="og:image" content="<?= $seoImage->crop(1500, 1500)->url() ?>">
-    <meta property="twitter:image" content="<?= $seoImage->crop(1500, 1500)->url() ?>">
+<?php if (isset($seoImage)) : ?>
+    <link rel="image_src" href="<?= $seoImage->thumb(['width'=>1200, 'height'=>630, 'crop'=>true])->url() ?>">
+    <meta property="og:image" content="<?= $seoImage->thumb(['width'=>1200, 'height'=>630, 'crop'=>true])->url() ?>">
+    <meta property="twitter:image" content="<?= $seoImage->thumb(['width'=>1200, 'height'=>630, 'crop'=>true])->url() ?>">
+<?php elseif ($seoIcon = $site->files()->template('seo-image')->first() ?? $seoIcon) : ?>
+    <link rel="image_src" href="<?= $seoIcon->thumb(['width'=>1200])->url() ?>">
+    <meta property="og:image" content="<?= $seoIcon->thumb(['width'=>1200])->url() ?>">
+    <meta property="twitter:image" content="<?= $seoIcon->thumb(['width'=>1200])->url() ?>">
 <?php endif ?>
 <?= css(['assets/css/app.css?v='.($kirby->option('debug') ? time() : 1)]) ?>
 <?= js('assets/js/app.js?v='.($kirby->option('debug') ? time() : 1), ['defer' => true]) ?>
 <?php if ($site->theme_color()->isNotEmpty()) : ?>
-<meta name="theme-color" content="<?= $site->theme_color() ?>">
+	<meta name="theme-color" content="<?= $site->theme_color() ?>">
 <?php endif ?>
 </head>
 
@@ -38,15 +42,15 @@ document.documentElement.classList.replace('no-js', 'is-js');
 <header>
 	<button id="navicon" aria-label="Menu open/close">
 		<span class="is-open">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
 		</span>
 		<span class="is-closed">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
 		</span>
 	</button>
 </header>
 
-<nav class="is-responsive is-dropdown">
+<nav id="nav-main" class="is-responsive is-dropdown">
 	<?php snippet('nav-main') ?>
 </nav>
 

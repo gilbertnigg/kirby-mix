@@ -23,13 +23,16 @@
     @apply px-4;
     @apply md:px-8;
   }
-  /* Grid */
-  .__grid {
+   /* Grid */
+   .__grid {
     @apply grid;
     @apply gap-4;
     @apply grid-cols-1;
     @apply md:grid-cols-2;
     @apply lg:grid-cols-4;
+  }
+  .__grid.is-1 {
+    @apply grid-cols-1;
   }
   .__grid.is-2 {
     @apply grid-cols-1;

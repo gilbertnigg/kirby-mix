@@ -6,4 +6,5 @@ max: 1
 layout: cards
 info: "{{ file.alt }}"
 image:
+  ratio: 8/6
   back: black

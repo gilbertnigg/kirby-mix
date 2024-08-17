@@ -11,8 +11,8 @@ fields:
     required: true
     options:
       - value: kirby
-        text: Kirby
-        icon: video
+        text: Upload
+        icon: upload
       - value: web
         text: Web
         icon: display

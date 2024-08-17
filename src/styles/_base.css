@@ -6,10 +6,10 @@
 @layer base {
   /*** Defaults ***/
   html {
-    @apply text-base;
     @apply text-body;
   }
   body {
+    @apply text-base;
     @apply bg-gray-100;
   }
   main {
@@ -26,6 +26,10 @@
   h2 {
     @apply mb-4;
     @apply text-lg;
+  }
+  h3 {
+    @apply mb-4;
+    @apply font-bold;
   }
   /* Block elements */
   article p {
@@ -49,7 +53,7 @@
   /* Inline elements */
   article hr {
     @apply my-8;
-    @apply text-primary;
+    @apply border-primary;
   }
   article a {
     @apply underline;

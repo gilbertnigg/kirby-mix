@@ -1,6 +1,9 @@
 title: Projekt
 icon: star
 
+navigation:
+  status: all
+
 options:
   move: false
 
@@ -38,7 +41,13 @@ columns:
         headline: Downloads
         type: files
         template: file
-        sortable: false
-        sortBy: name asc
+        info: '{{ file.description }}'
         image:
           back: black
+      videos:
+        headline: Videos
+        type: files
+        template: video
+        image:
+          back: black
+

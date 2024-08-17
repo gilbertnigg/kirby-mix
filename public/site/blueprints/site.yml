@@ -11,20 +11,22 @@ tabs:
             headline: Projekte
             type: pages
             template: project
-            parent: site.find("projects")
+            # parent: site.find("projects")
+            parent: site.index.findBy("intendedTemplate", "projects")
             create: project
             status: all
             image:
               query: page.images.findBy("template", "cover")
               cover: true
               back: black
-          blog:
+          news:
             headline: News
             type: pages
             template: post
-            parent: site.find("news")
+            parent: site.index.findBy("intendedTemplate", "news")
             create: post
             status: all
+            sortBy: date desc
             info: "{{ page.date.toDate('d.m.Y') }}"
             image:
               query: page.images.findBy("template", "cover")
@@ -34,6 +36,8 @@ tabs:
         sections:
           pages:
             headline: Seiten
+            templatesIgnore:
+              - footer-index
             create:
               - default
             status: all
@@ -41,39 +45,8 @@ tabs:
               query: icon
               back: black
   footer:
-    label: Footer
-    icon: text-left
-    columns:
-      - width: 1/2
-        fields:
-          footer_address:
-            label: Adresse
-            type: writer
-            nodes: false
-            toolbar:
-              inline: false
-              nodes: false
-              marks:
-                - bold
-                - link
-                - email
-      - width: 1/2
-        sections:
-          footer_pages:
-            headline: Seiten
-            type: pages
-            status: all
-            template: footer
-            image:
-              query: icon
-              back: black
-          footer_some:
-            label: Social Media
-            type: files
-            template: logo-some
-            info: "{{ file.title }}"
-            image:
-              back: black
+    extends: tabs/footer
+
   seo:
     label: SEO
     icon: search
@@ -98,15 +71,26 @@ tabs:
             multiple: false
             sortable: false
             max: 1
-            layout: cards
+            layout: cardlets
             help: 1500×1500 Pixel
             image:
               ratio: 1/1
               cover: true
               back: white
-          color:
+          image_some:
+            headline: Social Media Bild
+            type: files
+            template: seo-image
+            multiple: false
+            sortable: false
+            max: 1
+            layout: cardlets
+            help: 1200×630 Pixel
+            image:
+              back: white
+          theme_color:
             type: fields
             fields:
-              color:
+              theme_color:
                 label: Themenfarbe
                 type: color
