@@ -5,6 +5,11 @@ num: date
 options:
   move: false
 
+navigation:
+  status: all
+  template: post
+  sortBy: date desc
+
 columns:
   - width: 2/3
     sections:
