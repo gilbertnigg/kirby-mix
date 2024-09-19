@@ -1,11 +1,11 @@
 <?php
 return function ($page) {
-	$seoImage = $page->images()->template('cover')->first();
+	$seo_image = $page->images()->template('cover')->first();
 	$projects = $page->siblings();
 	$prev = $page->prevListed($projects);
 	$next = $page->nextListed($projects);
 	return [
-		'seoImage' => $seoImage,
+		'seo_image' => $seo_image,
 		'projects' => $projects,
 		'prev' => $prev,
 		'next' => $next
