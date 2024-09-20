@@ -4,11 +4,27 @@ columns:
   - width: 2/3
     fields:
       seo_title:
-        label: Seitentitel
+        label: SEO Seitentitel
         type: text
         help: 50 bis 60 Zeichen
       seo_description:
-        label: Seitenbeschreibung
+        label: SEO Seitenbeschreibung
         type: textarea
         buttons: false
         help: 100 bis 150 Zeichen
+  - width: 1/3
+    sections:
+      image_some:
+        headline: Website Karte
+        type: files
+        template: seo-image
+        multiple: false
+        sortable: false
+        max: 1
+        layout: cards
+        size: large
+        help: 1200×630 Pixel
+        image:
+          ratio: 120/63
+          cover: true
+          back: white
