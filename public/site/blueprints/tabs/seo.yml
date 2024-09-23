@@ -6,11 +6,13 @@ columns:
       seo_title:
         label: SEO Seitentitel
         type: text
+        placeholder: "{{ site.title }}"
         help: 50 bis 60 Zeichen
       seo_description:
         label: SEO Seitenbeschreibung
         type: textarea
         buttons: false
+        placeholder: "{{ site.seo_description }}"
         help: 100 bis 150 Zeichen
   - width: 1/3
     sections:
