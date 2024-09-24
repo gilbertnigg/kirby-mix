@@ -19,8 +19,12 @@ function seo_icon() {
 }
 
 function seo_image() {
-	return page()->images()->template('seo-image')->first();
-	return page()->images()->template('cover')->first();
-	return site()->images()->template('seo-image')->first();
-	return seo_icon();
+	if ($seo_image = page()->images()->template('seo-image')->first()) {
+	} else if ($seo_image = page()->images()->template('cover')->first()) {
+	} else if ($seo_image = site()->images()->template('seo-image')->first()) {
+	} else if ($seo_image = seo_icon()) {
+	} else {
+		$seo_image = null;
+	}
+	return $seo_image;
 }
