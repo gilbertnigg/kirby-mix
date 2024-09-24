@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <script>
-document.documentElement.classList.replace('no-js', 'is-js');
+document.documentElement.classList.replace('no-js', 'has-js');
 </script>
 <title><?= seo_title() ?></title>
 <meta name="description" content="<?= seo_description() ?>">

@@ -7,4 +7,12 @@
   .true-h-screen {
     @apply h-screen supports-[height:100dvh]:h-dvh;
   }
+
+  /* js */
+  .no-js {
+    /* no js detected */
+  }
+  .has-js {
+    /* js detected */
+  }
 }
