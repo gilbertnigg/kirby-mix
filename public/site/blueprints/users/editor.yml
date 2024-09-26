@@ -1,12 +1,16 @@
 title: Editor
-panel: true
 permissions:
-  site: true
-  users: false
-
   access:
+    account: true
+    languages: true
+    panel: true
+    site: true
     system: false
     users: false
+
+  languages:
+    create: false
+    delete: false
 
   user:
     changeRole: false
