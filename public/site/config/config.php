@@ -10,6 +10,14 @@ return [
 	'auth' => [
 		'methods' => ['password', 'password-reset']
 	],
+	'cache' => [
+		'pages' => [
+			'active' =>  false
+		],
+		'uuid' => [
+		  'active' =>  false
+		]
+	],
 	// 'languages' => true,
 	'panel' => [
 		'language' => 'de',
