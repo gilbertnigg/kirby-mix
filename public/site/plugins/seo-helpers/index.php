@@ -28,3 +28,11 @@ function seo_image() {
 	}
 	return $seo_image;
 }
+
+function language_code() {
+	if ($language_code = kirby()->language()->code()) {
+	} else {
+		$language_code = 'de';
+	}
+	return $language_code;
+}

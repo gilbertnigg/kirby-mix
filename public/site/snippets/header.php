@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="de" class="no-js">
+<html lang="<?= language_code() ?>" class="no-js">
 <head>
 <?php snippet('head') ?>
 </head>
