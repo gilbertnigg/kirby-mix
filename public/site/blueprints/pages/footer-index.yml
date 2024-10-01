@@ -15,8 +15,7 @@ tabs:
         sections:
           pages:
             headline: Seiten
-            create:
-              - default
+            template: default
             status: all
             image:
               query: icon

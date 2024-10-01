@@ -21,7 +21,7 @@ columns:
         type: pages
         status: all
         parent: site.index.findBy("intendedTemplate", "footer-index")
-        template: footer
+        template: default
         image:
           query: icon
           back: black
