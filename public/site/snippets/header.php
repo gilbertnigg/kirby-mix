@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="<?= language_code() ?>" class="no-js">
 <head>
-<?php snippet('head') ?>
+<?php snippet('head', ['cache'=>1]) ?>
 </head>
 
 <body>
