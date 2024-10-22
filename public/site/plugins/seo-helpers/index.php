@@ -29,10 +29,11 @@ function seo_image() {
 	return $seo_image;
 }
 
-function language_code() {
-	if ($language_code = kirby()->language()->code()) {
+function language_code($lang = 'de') {
+	if (kirby()->language() && kirby()->language()->code()) {
+		$language_code = kirby()->language()->code();
 	} else {
-		$language_code = 'de';
+		$language_code = $lang;
 	}
 	return $language_code;
 }
