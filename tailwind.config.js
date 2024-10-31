@@ -13,7 +13,7 @@ module.exports = {
     './public/site/templates/**/*.php',
     './src/scripts/**/*.js',
   ],
-  safelist: [{ pattern: /is-(.+)/ }, { pattern: /has-(.+)/ }],
+  safelist: [{ pattern: /is-(.+)/ }],
   darkMode: 'media',
   theme: {
     screens: {
