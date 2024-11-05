@@ -11,12 +11,12 @@
         </div>
         <div class="flex">
             <?php if ($site->files()->template('logo-some')->count()) : ?>
-            <nav id="nav-footer">
+            <nav id="nav-some">
                 <ul>
                     <?php foreach ($site->files()->template('logo-some')->sortBy('sort', 'asc', 'filename', 'asc') as $logo_some) : ?>
                     <li>
                         <a href="<?= $logo_some->weblink() ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="<?= $logo_some->thumb(['width'=>600, 'height'=>600])->url() ?>" class="size-8"
+                            <img src="<?= $logo_some->thumb(['width'=>600, 'height'=>600])->url() ?>" class="w-8"
                                 alt="<?= $logo_some->title() ?>" loading="lazy">
                         </a>
                     </li>
