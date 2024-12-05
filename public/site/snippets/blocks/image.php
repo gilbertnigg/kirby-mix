@@ -10,7 +10,7 @@ $img_size = $block->image_size()->value(); ?>
 			'1600w'  => ['width' => 1600, 'format' => 'webp'],
 		])?>"
 		sizes="(min-width: 1000px) 100vw"
-		src="<?= $image->resize(1600)->url() ?>" alt="<?= $image->alt()->esc()->or($page->title()) ?>">
+		src="<?= $image->resize(1600)->url() ?>" alt="<?= $image->alt()->or($page->title())->esc() ?>">
 	</picture>
 </figure>
 <?php endif ?>
