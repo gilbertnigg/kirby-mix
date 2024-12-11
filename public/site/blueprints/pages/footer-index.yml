@@ -2,6 +2,7 @@ title: Meta Index
 icon: info
 
 options:
+  list: false
   delete: false
   duplicate: false
   preview: false
