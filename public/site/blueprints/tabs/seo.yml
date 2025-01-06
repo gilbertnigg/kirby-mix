@@ -6,7 +6,7 @@ columns:
       seo_title:
         label: SEO Seitentitel
         type: text
-        placeholder: "{{ site.title }}"
+        placeholder: "{{ site.seo_title }}"
         help: 50 bis 60 Zeichen
       seo_description:
         label: SEO Seitenbeschreibung
