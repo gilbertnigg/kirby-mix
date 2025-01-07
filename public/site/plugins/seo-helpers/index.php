@@ -3,7 +3,7 @@ use Kirby\Toolkit\Str;
 
 function seo_title() {
 	return Str::unhtml(
-		page()->seo_description()->or(site()->seo_description()).
+		page()->seo_title()->or(site()->seo_title()).
 		(!page()->isHomePage() ? ' | '.page()->seo_title()->or(page()->title()) : '')
 	);
 }
