@@ -9,23 +9,19 @@
             </address>
             <?php endif ?>
         </div>
-        <div class="flex">
+        <div class="flex space-x-2 items-center">
             <?php if ($site->files()->template('logo-some')->count()) : ?>
-            <nav id="nav-some">
-                <ul>
-                    <?php foreach ($site->files()->template('logo-some')->sortBy('sort', 'asc', 'filename', 'asc') as $logo_some) : ?>
-                    <li>
-                        <a href="<?= $logo_some->weblink() ?>" target="_blank" rel="noopener noreferrer">
-                            <img src="<?= $logo_some->thumb(['width'=>600, 'height'=>600])->url() ?>" class="w-8"
-                                alt="<?= $logo_some->title() ?>" loading="lazy">
-                        </a>
-                    </li>
-                    <?php endforeach ?>
-                </ul>
+            <nav id="nav-some" class="flex space-x-2 items-center">
+			<?php foreach ($site->files()->template('logo-some')->sortBy('sort', 'asc', 'filename', 'asc') as $logo_some) : ?>
+				<a href="<?= $logo_some->weblink() ?>" target="_blank" rel="noopener noreferrer">
+					<img src="<?= $logo_some->thumb(['width'=>600, 'height'=>600])->url() ?>" class="w-8"
+						alt="<?= $logo_some->title() ?>" loading="lazy">
+				</a>
+			<?php endforeach ?>
             </nav>
             <?php endif ?>
             <?php if ($nav_footer = $site->children()->template('footer-index')) : ?>
-            <nav id="nav-footer">
+            <nav id="nav-footer" class="flex space-x-2 items-center">
                 <ul>
                     <?php foreach ($nav_footer->children()->listed() as $link) : ?>
                     <li class="<?= e($link === $page, 'is-selected') ?>">
