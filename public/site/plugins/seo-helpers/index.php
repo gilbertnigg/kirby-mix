@@ -3,8 +3,8 @@ use Kirby\Toolkit\Str;
 
 function seo_title() {
 	return Str::unhtml(
-		site()->title().
-		(!page()->isHomePage() ? ' - '.page()->seo_title()->or(page()->title()) : '')
+		page()->seo_description()->or(site()->seo_description()).
+		(!page()->isHomePage() ? ' | '.page()->seo_title()->or(page()->title()) : '')
 	);
 }
 
@@ -37,3 +37,4 @@ function language_code($lang = 'de') {
 	}
 	return $language_code;
 }
+
