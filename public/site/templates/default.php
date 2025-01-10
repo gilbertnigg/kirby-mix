@@ -11,8 +11,8 @@
 <p>
 	<img
 		srcset="<?= $cover->srcset([
-			'800w'  => ['width' => 800, 'format' => 'webp'],
-			'1600w'  => ['width' => 1600, 'format' => 'webp'],
+			'800w'  => ['width' => 1000, 'height' => 1000, 'crop'=>true, 'format' => 'webp'],
+			'1600w'  => ['width' => 2400, 'format' => 'webp'],
 		])?>"
 		sizes="(min-width: 1000px) 100vw"
 		src="<?= $cover->thumb(['width'=>1400])->url() ?>" class="w-full" alt="<?= $cover->alt()->or($site->title()) ?>"
@@ -64,7 +64,7 @@
 		<?php endif ?>
 		<span class="block p-4">
 			<h3><?= $project->title() ?></h3>
-			<?= $project->date()->toDate('Y.m.d') ?><br>
+			<?= $project->date()->toDate('d.m.X') ?><br>
 			<?php if ($project->headline()->isNotEmpty()) : ?>
 			<?= $project->headline()->kti() ?>
 			<?php endif ?>
