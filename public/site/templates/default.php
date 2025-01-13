@@ -64,7 +64,7 @@
 		<?php endif ?>
 		<span class="block p-4">
 			<h3><?= $project->title() ?></h3>
-			<?= $project->date()->toDate('d.m.X') ?><br>
+			<?= $project->date()->toDate('d.m.Y') ?><br>
 			<?php if ($project->headline()->isNotEmpty()) : ?>
 			<?= $project->headline()->kti() ?>
 			<?php endif ?>
