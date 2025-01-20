@@ -9,6 +9,7 @@
     @apply text-body;
   }
   body {
+    @apply antialiased;
     @apply text-base;
     @apply bg-gray-100;
   }
