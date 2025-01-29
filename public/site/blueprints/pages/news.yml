@@ -5,6 +5,10 @@ options:
   delete: false
   duplicate: false
 
+navigation:
+  status: all
+  template: all
+
 tabs:
   content:
     label: Seite
