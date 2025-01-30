@@ -21,16 +21,19 @@
   /* Titles */
   h1 {
     @apply mb-4;
-    @apply font-bold;
     @apply text-xl;
+    @apply font-bold;
+    @apply text-pretty;
   }
   h2 {
     @apply mb-4;
     @apply text-lg;
+    @apply text-pretty;
   }
   h3 {
     @apply mb-4;
     @apply font-bold;
+    @apply text-pretty;
   }
   /* Block elements */
   article p {
