@@ -53,6 +53,10 @@ tabs:
     columns:
       - width: 2/3
         fields:
+          seo_title:
+            label: SEO Seitentitel
+            type: text
+            help: 50 bis 60 Zeichen
           seo_description:
             label: SEO Seitenbeschreibung
             type: textarea
