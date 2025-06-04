@@ -14,9 +14,6 @@ return [
 		'pages' => [
 			'active' =>  false
 		],
-		'uuid' => [
-		  'active' =>  false
-		]
 	],
 	// 'languages' => true,
 	'panel' => [
