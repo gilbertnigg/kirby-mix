@@ -1,10 +1,12 @@
 # Kirby-Mix
 ## Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS
 
+
+### Install backend
+- [Kirby 5x](https://getkirby.com)
+Based on [Kirby Composerkit](https://github.com/getkirby/composerkit/)
 ```
-git clone --depth 1 https://github.com/gilbertnigg/kirby-mix.git project
-rm -rf ./project/.git
-cd project
+composer install
 ```
 
 ### Install frontend
@@ -18,19 +20,8 @@ npm i
 
 Rename and config `.env`
 
-### Install backend
-- [Kirby 4x](https://getkirby.com  )
-```
-cd public
-composer install
-```
----
-```
-cd ../
-```
 
-
-### `npm run` scripts
+### npm scripts
 
 watch
 ```
@@ -42,4 +33,4 @@ npm run prod
 ```
 
 ---
-© [Gilbert Nigg](http://www.gilles.ch) 2024
+© [Gilbert Nigg](http://www.gilles.ch) 2025

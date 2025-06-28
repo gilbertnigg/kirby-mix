@@ -7,10 +7,10 @@ module.exports = {
   },
   // Purge files
   content: [
-    './public/site/controllers/**/*.php',
-    './public/site/plugins/**/*.php',
-    './public/site/snippets/**/*.php',
-    './public/site/templates/**/*.php',
+    './site/controllers/**/*.php',
+    './site/plugins/**/*.php',
+    './site/snippets/**/*.php',
+    './site/templates/**/*.php',
     './src/scripts/**/*.js',
   ],
   safelist: [{ pattern: /is-(.+)/ }],

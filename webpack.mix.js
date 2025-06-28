@@ -30,9 +30,9 @@ mix.options({
     files: [
       process.env.MIX_DIST + '/js/**/*.js',
       process.env.MIX_DIST + '/css/**/*.css',
-      'public/content/**/*.txt',
-      'public/site/snippets/**/*.php',
-      'public/site/plugins/**/*.php',
-      'public/site/templates/*.php'
+      'data/storage/content/**/*.txt',
+      'site/snippets/**/*.php',
+      'site/plugins/**/*.php',
+      'site/templates/*.php'
     ],
   });
