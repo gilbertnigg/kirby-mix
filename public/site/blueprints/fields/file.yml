@@ -1,8 +1,0 @@
-label: Datei
-type: files
-multiple: false
-info: "{{ file.description }}"
-uploads: file
-query: page.files.template("file")
-image:
-  back: black

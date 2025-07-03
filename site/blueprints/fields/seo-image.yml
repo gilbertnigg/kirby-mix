@@ -1,0 +1,8 @@
+label: SEO Bild
+type: files
+multiple: false
+max: 1
+sortable: false
+uploads: image
+query: page.files.template("image")
+empty: Kein Bild

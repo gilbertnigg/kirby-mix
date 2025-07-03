@@ -8,14 +8,8 @@
     @apply inline-block rounded my-2 py-2 px-4;
     @apply bg-primary text-white font-bold no-underline;
   }
-  .btn--white {
-    @apply btn;
-    @apply no-underline;
-    @apply text-primary bg-white;
-  }
 
-  /*** Layout ***/
-  /* Center */
+  /*** Center layout ***/
   .__center {
     @apply w-full;
     @apply max-w-screen-xl;
@@ -23,8 +17,9 @@
     @apply px-4;
     @apply md:px-8;
   }
-   /* Grid */
-   .__grid {
+
+  /*** Layout grid ***/
+  .__grid {
     @apply grid;
     @apply gap-4;
     @apply grid-cols-1;

@@ -1,0 +1,35 @@
+title: Filter
+icon: tag
+
+create:
+  title:
+    label: Filtername
+  redirect: false
+  status: listed
+
+options:
+  move: false
+  preview: false
+
+status:
+  draft:
+    label: Versteckt
+  listed:
+    label: Sichtbar
+
+columns:
+  - width: 2/3
+    sections:
+      pages:
+        type: pages
+        label: Seiten
+        query: page.parent.parent.childrenAndDrafts.filterBy('tags', page.uuid, ',')
+        info: "{{ page.date.toDate('d.m.Y') }}"
+        create: false
+        templates:
+          - post
+          - project
+        limit: 9999
+        image:
+          back: black
+          cover: true

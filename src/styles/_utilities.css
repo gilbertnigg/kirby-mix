@@ -3,11 +3,34 @@
   that should always take precedence over any other styles.
 */
 @layer utilities {
-  /* Fix mobile height */
+  /*** Mobile screen ***/
   .true-h-screen {
     @apply h-screen supports-[height:100dvh]:h-dvh;
   }
 
+  /*** Anchor ***/
+  .__anchor {
+    @apply relative;
+    @apply -top-20;
+  }
+  /*** Aspect ratio ***/
+  .__aspect {
+    @apply block;
+    @apply relative;
+  }
+  .__aspect > * {
+    @apply absolute;
+    @apply w-full;
+    @apply h-full;
+  }
+  .__aspect.is-16x9 {
+    @apply pb-[calc(9/16*100%)];
+  }
+  .__aspect.is-8x6 {
+    @apply pb-[calc(6/8*100%)];
+  }
+
+  /*** JS Support ***/
   /* js */
   .no-js {
     /* no js detected */

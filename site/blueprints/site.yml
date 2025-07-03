@@ -1,0 +1,53 @@
+title: Site
+
+tabs:
+  content:
+    label: Website
+    icon: sitemap
+    columns:
+      - width: 1/2
+        sections:
+          news:
+            headline: News
+            type: pages
+            template: post
+            parent: site.index.findBy("intendedTemplate", "news")
+            status: all
+            empty: Keine News
+            sortBy: date desc
+            info: "{{ page.date.toDate('d.m.Y') }}"
+          projects:
+            headline: Projekte
+            type: pages
+            template: project
+            parent: site.index.findBy("intendedTemplate", "projects")
+            status: all
+            empty: Keine Projekte
+      - width: 1/2
+        sections:
+          pages:
+            headline: Seiten
+            templatesIgnore:
+              - footer-index
+            create:
+              - default
+            status: all
+            image:
+              back: black
+              cover: true
+  footer:
+    extends: tabs/footer
+
+  seo:
+    label: SEO
+    icon: search
+    columns:
+      - width: 2/3
+        fields:
+          extends: fields/seo
+      - width: 1/3
+        sections:
+          favicon:
+            extends: sections/seo-icon
+          seo_image:
+            extends: sections/seo-image

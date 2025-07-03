@@ -1,0 +1,13 @@
+headline: Website Icon
+type: files
+template: seo-icon
+multiple: false
+sortable: false
+max: 1
+layout: cardlets
+help: 1500×1500 Pixel
+empty: Kein Bild
+image:
+  ratio: 1/1
+  cover: true
+  back: black

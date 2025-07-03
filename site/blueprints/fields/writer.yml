@@ -1,0 +1,15 @@
+type: writer
+headings:
+  - 2
+  - 3
+nodes:
+  - heading
+  - bulletList
+  - orderedList
+toolbar:
+  inline: false
+  marks:
+    - link
+    - bold
+    - '|'
+    - clear

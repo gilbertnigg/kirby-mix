@@ -1,0 +1,55 @@
+title: News
+icon: chat
+
+options:
+  delete: false
+  duplicate: false
+
+navigation:
+  status: all
+  template: all
+
+image:
+  query: page.children.template('post').sortBy('date', 'desc').first.cover.toFile
+  cover: true
+  back: black
+
+tabs:
+  content:
+    label: Seite
+    icon: document
+    columns:
+      - width: 1/2
+        sections:
+          content:
+            type: fields
+            fields:
+              headline:
+                label: Headline
+                type: textarea
+                buttons: false
+              text:
+                label: Text
+                extends: fields/writer
+      - width: 1/2
+        sections:
+          pages:
+            headline: Posts
+            status: all
+            info: "{{ page.date.toDate('d.m.Y') }}"
+            template: post
+            sortBy: date desc
+            image:
+              query: page.cover.toFile
+              back: black
+              cover: true
+          tags:
+            headline: Tags
+            type: pages
+            template: filter
+            parent: page.children.findBy("intendedTemplate", "filters")
+            image:
+              back: black
+
+  seo:
+    extends: tabs/seo

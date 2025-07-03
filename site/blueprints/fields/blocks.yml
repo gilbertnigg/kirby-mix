@@ -1,0 +1,17 @@
+label: Inhalte
+type: blocks
+fieldsets:
+  text:
+    label: Text
+    type: group
+    fieldsets:
+      - heading
+      - text
+  media:
+    label: Medien
+    type: group
+    fieldsets:
+      - image
+      - gallery
+      - video
+      - downloads

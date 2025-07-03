@@ -2,65 +2,65 @@
 # ------------
 node_modules
 
-# Distributed files
-# ------------
-/public/assets/*
-
-# Content files
-# ------------
-/public/content/*
-# !/public/content/aktuell
-# !/public/content/error
-# !/public/content/meta
-# !/public/content/projekte
-# !/public/content/site.txt
-
-# Kirby files
-# ------------
-/public/composer.lock
-/public/kirby/*
-/public/vendor/*
-
 # System files
 # ------------
 Icon
 .DS_Store
-
-# Editor config files
-# ------------
-.vscode
-.nova
-.idea
-.env
 
 # Temporary files
 # ---------------
 /public/media/*
 !/public/media/index.html
 
+# Content files
+# ------------
+/data/storage/content/*
+/data/storage/languages/*
+
+# Custom Kirby plugins
+# ------------
+/site/plugins/*
+!/site/plugins/html-helpers
+!/site/plugins/seo-helpers
+
+# Env files
+# ------------
+/.env
+/site/config/env.php
+
 # Lock files
 # ---------------
 .lock
+
+# Editors
+# (sensitive workspace files)
+# ---------------------------
+*.sublime-workspace
+/.vscode/*
+/.nova
+/.idea
+!/.vscode/settings.json
+
+# Composer dependencies
+# ---------------------
+/vendor
 
 # -------------SECURITY-------------
 # NEVER publish these files via Git!
 # -------------SECURITY-------------
 
-# Cache Files
-# ---------------
-/public/site/cache/*
-!/public/site/cache/index.html
-
 # Accounts
 # ---------------
-/public/site/accounts/*
-!/public/site/accounts/index.html
+/data/storage/accounts/*
+!/data/storage/accounts/.gitkeep
 
-# Sessions
+# Runtime Files
 # ---------------
-/public/site/sessions/*
-!/public/site/sessions/index.html
+/data/runtime/*
+!/data/runtime/cache/.gitkeep
+!/data/runtime/logs/.gitkeep
+!/data/runtime/sessions/.gitkeep
 
 # License
 # ---------------
-/public/site/config/.license
+/data/storage/.license

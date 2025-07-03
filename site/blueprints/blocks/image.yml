@@ -1,0 +1,8 @@
+name: field.blocks.image.name
+icon: image
+preview: image
+wysiwyg: true
+
+fields:
+  image:
+    extends: fields/image

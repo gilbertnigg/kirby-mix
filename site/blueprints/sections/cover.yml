@@ -1,0 +1,11 @@
+headline: Cover
+type: files
+template: cover
+sortable: false
+max: 1
+layout: cards
+info: "{{ file.alt }}"
+empty: Kein Bild
+image:
+  ratio: 8/6
+  back: black

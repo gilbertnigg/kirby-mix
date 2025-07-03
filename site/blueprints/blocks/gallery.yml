@@ -1,0 +1,12 @@
+name: Bilderalerie
+icon: images
+wysiwyg: true
+preview: gallery
+
+fields:
+  images:
+    label: field.blocks.gallery.images.label
+    type: files
+    empty: field.blocks.gallery.images.empty
+    uploads: image
+    query: page.files.template("image")

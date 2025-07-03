@@ -5,33 +5,31 @@
 
 @layer base {
   /*** Defaults ***/
-  html {
-    @apply text-body;
-  }
   body {
-    @apply antialiased;
+    @apply subpixel-antialiased;
+    @apply font-sans;
     @apply text-base;
+    @apply text-body;
     @apply bg-gray-100;
   }
   main {
     @apply block;
   }
 
-  /*** Styles ***/
-  /* Titles */
+  /*** Typography ***/
   h1 {
     @apply mb-4;
-    @apply text-xl;
     @apply font-bold;
-    @apply text-pretty;
+    @apply text-balance;
+    @apply text-xl;
   }
   h2 {
     @apply mb-4;
-    @apply text-lg;
+    @apply font-bold;
     @apply text-pretty;
+    @apply text-lg;
   }
   h3 {
-    @apply mb-4;
     @apply font-bold;
     @apply text-pretty;
   }
@@ -45,8 +43,8 @@
     @apply ml-8;
     @apply mb-4;
   }
-  article ul li p { /* Kirby fix */
-    @apply mb-0;
+  article li p:last-child {
+      @apply mb-0;
   }
   article ol {
     @apply list-decimal;
@@ -54,13 +52,14 @@
     @apply ml-8;
     @apply mb-4;
   }
-  /* Inline elements */
   article hr {
     @apply my-8;
     @apply border-primary;
   }
+  /* Inline elements */
   article a {
     @apply underline;
     @apply text-primary;
   }
+
 }

@@ -1,0 +1,12 @@
+label: Cover
+type: files
+multiple: false
+info: "{{ file.alt }}"
+max: 1
+uploads: image
+query: page.files.template("image")
+layout: cards
+empty: Kein Bild ausgeählt
+image:
+  ratio: 8/6
+  back: black

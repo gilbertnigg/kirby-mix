@@ -1,0 +1,23 @@
+title: Filter
+icon: tag
+
+options:
+  changeStatus: false
+  delete: false
+  duplicate: false
+  move: false
+
+navigation:
+  status: all
+
+columns:
+  - width: 2/3
+    sections:
+      pages:
+        headline: Filter
+        type: pages
+        template: filter
+        limit: 9999
+        image:
+          back: black
+          cover: true

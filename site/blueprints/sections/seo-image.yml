@@ -1,0 +1,13 @@
+headline: SEO Bild
+type: files
+template: seo-image
+multiple: false
+sortable: false
+max: 1
+layout: cards
+size: large
+help: 1200×630 Pixel
+image:
+  ratio: 120/63
+  cover: true
+  back: white

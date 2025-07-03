@@ -1,8 +1,0 @@
-label: Bild
-type: files
-multiple: false
-info: "{{ file.alt }}"
-uploads: image
-query: page.files.template("image")
-image:
-  back: black

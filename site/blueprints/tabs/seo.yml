@@ -1,0 +1,16 @@
+label: SEO
+icon: search
+columns:
+  - width: 2/3
+    sections:
+      text:
+        type: fields
+        fields:
+          extends: fields/seo
+  - width: 1/3
+    sections:
+      seo_image:
+        type: fields
+        fields:
+          seo_image:
+            extends: fields/seo-image
