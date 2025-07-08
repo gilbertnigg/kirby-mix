@@ -3,10 +3,32 @@
   that you want to be able to override with utilities.
 */
 @layer components {
-  /* Buttons */
+  /*** Buttons ***/
   .btn {
     @apply inline-block rounded my-2 py-2 px-4;
     @apply bg-primary text-white font-bold no-underline;
+  }
+
+  /*** Anchor ***/
+  .__anchor {
+    @apply relative;
+    @apply -top-20;
+  }
+  /*** Aspect ratio ***/
+  .__aspect {
+    @apply block;
+    @apply relative;
+  }
+  .__aspect > * {
+    @apply absolute;
+    @apply w-full;
+    @apply h-full;
+  }
+  .__aspect.is-16x9 {
+    @apply pb-[calc(9/16*100%)];
+  }
+  .__aspect.is-8x6 {
+    @apply pb-[calc(6/8*100%)];
   }
 
   /*** Center layout ***/
