@@ -19,7 +19,7 @@ tabs:
     label: Inhalt
     icon: document
     columns:
-      - width: 2/3
+      - width: 1/2
         sections:
           content:
             type: fields
@@ -31,7 +31,7 @@ tabs:
               text:
                 label: Text
                 extends: fields/writer
-      - width: 1/3
+      - width: 1/2
         sections:
           pages:
             headline: Seiten

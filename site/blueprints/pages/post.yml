@@ -48,11 +48,28 @@ tabs:
             fields:
               cover:
                 extends: fields/cover
+              date:
+                label: Datum
+                type: date
+                display: DD.MM.YYYY
+                default: today
+                required: true
+              tags:
+                label: Tags
+                type: tags
+                accept: options
+                columns: 3
+                options:
+                  type: query
+                  query: page.parent.childrenAndDrafts.template("filters").first.children
+                  text: "{{ page.title }}"
+                  value: "{{ page.uuid }}"
               downloads:
                 label: Downloads
                 type: files
-                uploads: files
+                uploads: file
                 query: page.files.template("file")
+                info: "{{ file.description }}"
                 empty: Kein Bild
                 image:
                   back: black

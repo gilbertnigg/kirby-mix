@@ -35,6 +35,7 @@ tabs:
             type: files
             template: image
             layout: cards
+            info: "{{ file.alt }}"
             size: small
             batch: true
             image:
@@ -44,20 +45,11 @@ tabs:
         sections:
           cover:
             extends: sections/cover
-          gallery:
-            headline: Bildergalerie
-            type: files
-            template: image
-            info: '{{ file.alt }}'
-            empty: Kein Bilder
-            batch: true
-            image:
-              back: black
           downloads:
             headline: Downloads
             type: files
             template: file
-            info: '{{ file.description }}'
+            info: "{{ file.description }}"
             empty: Kein Dateien
             batch: true
             image:

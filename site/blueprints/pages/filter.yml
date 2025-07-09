@@ -24,7 +24,6 @@ columns:
         type: pages
         label: Seiten
         query: page.parent.parent.childrenAndDrafts.filterBy('tags', page.uuid, ',')
-        info: "{{ page.date.toDate('d.m.Y') }}"
         create: false
         templates:
           - post
