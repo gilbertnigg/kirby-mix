@@ -28,7 +28,7 @@
     <?php if ($page->children()->listed()->count()) : ?>
     <hr>
     <h2>Subpages</h2>
-    <div class="__grid is-row items-center">
+    <div class="__grid is-row">
         <?php foreach ($page->children()->listed() as $subpage) : ?>
         <div>
             <a href="<?= $subpage->url() ?>">
@@ -43,7 +43,7 @@
     <?php if ($page->images()->template('image')->count()) : ?>
     <hr>
     <h2>Images</h2>
-    <div class="__grid is-row items-center">
+    <div class="__grid is-row">
         <?php foreach ($page->images()->template('image')->sortBy('sort', 'asc', 'filename', 'asc') as $img) : ?>
         <div>
             <img src="<?= $img->thumb(['width'=>1600])->url() ?>" alt="<?= $img->alt() ?>">
