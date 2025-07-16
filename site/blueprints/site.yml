@@ -28,7 +28,7 @@ tabs:
           pages:
             headline: Seiten
             templatesIgnore:
-              - footer-index
+              - meta-index
             create:
               - default
             status: all

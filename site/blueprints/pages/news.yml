@@ -39,6 +39,7 @@ tabs:
             info: "{{ page.date.toDate('d.m.Y') }}"
             template: post
             sortBy: date desc
+            empty: Keine Posts
             image:
               query: page.cover.toFile
               back: black
@@ -46,8 +47,9 @@ tabs:
           tags:
             headline: Tags
             type: pages
-            template: filter
-            parent: page.children.findBy("intendedTemplate", "filters")
+            template: tag
+            parent: page.children.findBy("intendedTemplate", "tags")
+            empty: Keine Tags
             image:
               back: black
 

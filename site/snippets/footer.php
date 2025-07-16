@@ -20,7 +20,7 @@
 			<?php endforeach ?>
             </nav>
             <?php endif ?>
-            <?php if ($nav_footer = $site->children()->template('footer-index')) : ?>
+            <?php if ($nav_footer = $site->children()->template('meta-index')) : ?>
             <nav id="nav-footer" class="flex space-x-2 items-center">
                 <ul>
                     <?php foreach ($nav_footer->children()->listed() as $link) : ?>

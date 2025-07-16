@@ -1,9 +1,9 @@
-title: Filter
+title: Tag
 icon: tag
 
 create:
   title:
-    label: Filtername
+    label: Tag
   redirect: false
   status: listed
 

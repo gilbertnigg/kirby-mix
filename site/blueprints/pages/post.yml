@@ -61,7 +61,7 @@ tabs:
                 columns: 3
                 options:
                   type: query
-                  query: page.parent.childrenAndDrafts.template("filters").first.children
+                  query: page.parent.childrenAndDrafts.template("tags").first.children
                   text: "{{ page.title }}"
                   value: "{{ page.uuid }}"
               downloads:

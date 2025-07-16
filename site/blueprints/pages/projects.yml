@@ -37,6 +37,7 @@ tabs:
             headline: Seiten
             status: all
             template: project
+            empty: Keine Projekte
 
   seo:
     extends: tabs/seo

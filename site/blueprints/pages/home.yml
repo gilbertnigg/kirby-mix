@@ -12,11 +12,6 @@ navigation:
   status: all
   template: all
 
-image:
-  query: page.children.template('post').sortBy('date', 'desc').first.cover.toFile
-  back: black
-  cover: true
-
 tabs:
   content:
     label: Seite

@@ -36,5 +36,5 @@ return [
 			}
 		]
 	],
-	'sitemap.ignore' => ['error', 'footer-index'],
+	'sitemap.ignore' => ['error', 'meta-index'],
 ];

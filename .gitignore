@@ -16,6 +16,7 @@ Icon
 # ------------
 /data/storage/content/*
 /data/storage/languages/*
+!/data/storage/content/home
 
 # Custom Kirby plugins
 # ------------

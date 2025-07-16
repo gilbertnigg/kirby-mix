@@ -16,17 +16,17 @@ columns:
             - email
   - width: 1/2
     sections:
-      footer_pages:
-        headline: Footer-Navigation
+      meta_pages:
+        headline: Meta-Navigation
         type: pages
         status: all
-        parent: site.index.findBy("intendedTemplate", "footer-index")
+        parent: site.index.findBy("intendedTemplate", "meta-index")
         template: default
-        empty: "Keine Footer-Seiten"
+        empty: "Keine Meta-Seiten"
         image:
           query: icon
           back: black
-      footer_some:
+      meta_some:
         label: Social Media
         type: files
         template: logo-some

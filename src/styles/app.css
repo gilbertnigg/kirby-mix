@@ -2,7 +2,7 @@
 @import "_fonts";
 @import "_base";
 @import "tailwindcss/components";
-@import "_components";
+@import "_gui";
 @import "_nav";
 @import "tailwindcss/utilities";
 @import "_utilities";

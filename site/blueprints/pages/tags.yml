@@ -1,4 +1,4 @@
-title: Filter
+title: Tags
 icon: tag
 
 options:
@@ -14,9 +14,9 @@ columns:
   - width: 2/3
     sections:
       pages:
-        headline: Filter
+        headline: Tags
         type: pages
-        template: filter
+        template: tag
         limit: 9999
         image:
           back: black
