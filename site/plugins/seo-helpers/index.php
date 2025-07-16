@@ -7,7 +7,7 @@ function seo_title() {
 		$seo_title = page()->seo_title();
 	} else {
 		if (page()->isHomePage()) {
-			$seo_title = page()->seo_title();
+			$seo_title = $site_title;
 		} else {
 			$seo_title = $site_title.' - '.page()->seo_title()->or(page()->title());
 		}
