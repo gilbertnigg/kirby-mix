@@ -9,9 +9,9 @@
             </address>
             <?php endif ?>
         </div>
-        <div class="flex space-x-2 items-center">
+        <div class="flex space-x-2">
             <?php if ($site->files()->template('logo-some')->count()) : ?>
-            <nav id="nav-some" class="flex space-x-2 items-center">
+            <nav id="nav-some" class="flex space-x-2">
 			<?php foreach ($site->files()->template('logo-some')->sortBy('sort', 'asc', 'filename', 'asc') as $logo_some) : ?>
 				<a href="<?= $logo_some->weblink() ?>" target="_blank" rel="noopener noreferrer">
 					<img src="<?= $logo_some->thumb(['width'=>600, 'height'=>600])->url() ?>" class="w-8"
@@ -21,8 +21,8 @@
             </nav>
             <?php endif ?>
             <?php if ($nav_footer = $site->children()->template('meta-index')) : ?>
-            <nav id="nav-footer" class="flex space-x-2 items-center">
-                <ul>
+            <nav id="nav-meta">
+                <ul class="flex space-x-2">
                     <?php foreach ($nav_footer->children()->listed() as $link) : ?>
                     <li class="<?= e($link === $page, 'is-selected') ?>">
                         <?= $link->title()->link() ?>
