@@ -32,7 +32,7 @@ tabs:
               text:
                 label: Text
                 extends: fields/writer
-              images:
+              gallery:
                 label: Bildergalerie
                 type: files
                 uploads: image

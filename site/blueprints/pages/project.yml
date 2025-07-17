@@ -30,7 +30,7 @@ tabs:
               text:
                 label: Text
                 extends: fields/writer
-          images:
+          gallery:
             headline: Bildergalerie
             type: files
             template: image

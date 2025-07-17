@@ -4,7 +4,7 @@ wysiwyg: true
 preview: gallery
 
 fields:
-  images:
+  gallery:
     label: field.blocks.gallery.images.label
     type: files
     empty: field.blocks.gallery.images.empty
