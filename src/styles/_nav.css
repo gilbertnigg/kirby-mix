@@ -13,21 +13,7 @@
     @apply md:space-x-4;
   }
 
-  /*** Nav max-md / toggle ***/
-  .is-nav-open,
-  .is-nav-open body {
-    @apply max-md:overflow-hidden;
-  }
-  .is-nav-open #nav-main {
-    @apply max-md:block;
-  }
-  .is-nav-open #navicon .is-open {
-    @apply max-md:hidden;
-  }
-  .is-nav-open #navicon .is-closed {
-    @apply max-md:block;
-  }
-
+  /* Nav dropdown */
   #nav-main.is-dropdown > ul a {
     @apply md:block;
   }
@@ -66,5 +52,19 @@
   }
   #navicon .is-closed {
     @apply hidden;
+  }
+  .is-nav-open,
+  .is-nav-open body {
+    @apply bg-blue-50;
+    @apply max-md:overflow-hidden;
+  }
+  .is-nav-open #nav-main {
+    @apply max-md:block;
+  }
+  .is-nav-open #navicon .is-open {
+    @apply max-md:hidden;
+  }
+  .is-nav-open #navicon .is-closed {
+    @apply max-md:block;
   }
 }
