@@ -6,7 +6,7 @@ max: 1
 uploads: image
 query: page.files.template("image")
 layout: cards
-empty: Kein Bild ausgeählt
+empty: Kein Cover ausgeählt
 image:
   ratio: 8/6
   back: black
