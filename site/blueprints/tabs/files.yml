@@ -8,6 +8,7 @@ columns:
         type: files
         template: file
         info: "{{ file.description }}"
+        batch: true
         sortable: false
         sortBy: name asc
         image:
@@ -19,6 +20,7 @@ columns:
         type: files
         template: image
         info: "{{ file.alt }}"
+        batch: true
         sortable: false
         image:
           back: black
@@ -29,6 +31,7 @@ columns:
         type: files
         template: video
         info: "{{ file.description }}"
+        batch: true
         sortable: false
         sortBy: name asc
         image:
