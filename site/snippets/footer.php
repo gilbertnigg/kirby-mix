@@ -20,10 +20,10 @@
 			<?php endforeach ?>
             </nav>
             <?php endif ?>
-            <?php if ($nav_footer = $site->children()->template('meta-index')) : ?>
+            <?php if ($links_footer = $site->children()->template('meta-index')->children()->listed()) : ?>
             <nav id="nav-meta">
                 <ul class="flex space-x-2">
-                    <?php foreach ($nav_footer->children()->listed() as $link) : ?>
+                    <?php foreach ($links_footer->children()->listed() as $link) : ?>
                     <li class="<?= e($link === $page, 'is-selected') ?>">
                         <?= $link->title()->link() ?>
                     </li>
