@@ -1,0 +1,15 @@
+name: Dialog
+icon: chat
+wysiwyg: true
+preview: fields
+fields:
+  button:
+    label: Text Button
+    type: text
+    required: true
+    width: 1/2
+  text:
+    label: Text Dialog
+    extends: fields/writer
+    required: true
+    placeholder: field.blocks.text.placeholder

@@ -1,0 +1,17 @@
+name: Ausklapp-Inhalte
+icon: menu
+wysiwyg: true
+preview: fields
+fields:
+  accordion:
+    label: Inhalte
+    type: structure
+    columns:
+      headline: true
+    fields:
+      headline:
+        label: Überschrift
+        type: text
+      text:
+        label: Text
+        extends: fields/writer

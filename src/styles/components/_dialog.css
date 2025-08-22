@@ -1,0 +1,24 @@
+@layer components {
+  dialog {
+    @apply transition-[transform,opacity] ease-out;
+    @apply overflow-auto;
+    @apply overscroll-none;
+    @apply bg-transparent;
+  }
+  dialog::backdrop {
+    @apply transition-opacity;
+    @apply backdrop-blur-sm;
+    @apply bg-black/50;
+  }
+
+  /* Animation */
+  @starting-style {
+    dialog {
+      @apply scale-95;
+      @apply opacity-0;
+    }
+    dialog::backdrop {
+      @apply opacity-0;
+    }
+  }
+}

@@ -15,3 +15,5 @@ fieldsets:
       - gallery
       - video
       - downloads
+      - accordion
+      - dialog

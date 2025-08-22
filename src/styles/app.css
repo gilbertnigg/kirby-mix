@@ -4,6 +4,8 @@
 @import "tailwindcss/components";
 @import "_gui";
 @import "_nav";
+@import "components/_accordion.css";
+@import "components/_dialog.css";
 @import "tailwindcss/utilities";
 @import "_utilities";
 

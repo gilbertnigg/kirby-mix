@@ -1,0 +1,60 @@
+@layer components {
+	.__accordion {
+    interpolate-size: allow-keywords;
+		@apply my-4;
+		@apply border-b border-black;
+	}
+	.__accordion details {
+		@apply border-t border-black;
+	}
+	.__accordion summary {
+		@apply flex justify-between items-center;
+		@apply overflow-hidden;
+		@apply cursor-pointer;
+		@apply py-4;
+	}
+	.__accordion h3 {
+		@apply m-0;
+		@apply flex-1;
+	}
+
+	/* Icon */
+	.__accordion summary::-webkit-details-marker {
+		@apply hidden;
+	}
+	.__accordion summary::after {
+    will-change: transition;
+		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='currentcolor' fill='none' stroke-width='5' viewBox='0 0 100 100'%3E%3Cpath d='M30,96L70,50L30,4'/%3E%3C/svg%3E");
+		mask-size: cover;
+		@apply will-change-[transform];
+		@apply transition-transform ease-out;
+		@apply content-[''];
+		@apply block;
+		@apply size-6;
+		@apply rotate-90;
+		@apply origin-center;
+		@apply bg-contain;
+		@apply bg-no-repeat;
+		@apply bg-center;
+		@apply bg-black;
+	}
+	.__accordion details[open] > summary::after {
+		@apply -rotate-90;
+	}
+
+	/* Animation (Chrome) */
+	.__accordion details[open]  {
+		@apply pb-4;
+	}
+	.is-js .__accordion details::details-content {
+    block-size: 0;
+    transition-behavior: allow-discrete;
+    content-visibility: auto;
+		@apply will-change-[block-size,content-visibility];
+		@apply transition-[block-size,content-visibility] ease-out;
+		@apply overflow-hidden;
+  }
+  .is-js .__accordion details[open]::details-content {
+    block-size: auto;
+  }
+}
