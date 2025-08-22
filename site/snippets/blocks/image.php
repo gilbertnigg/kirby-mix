@@ -2,7 +2,7 @@
 
 <?php if ($image = $block->image()->toFile()) :
 $img_size = $block->image_size()->value(); ?>
-<div class="__center is-<?= $img_size ?>">
+<div class="is-<?= $img_size ?>">
 	<img
 	srcset="<?= $image->srcset([
 		'800w'  => ['width' => 800, 'format' => 'webp'],
