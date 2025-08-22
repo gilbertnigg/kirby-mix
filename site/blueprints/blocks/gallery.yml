@@ -1,7 +1,7 @@
 name: Bildergalerie
 icon: images
+preview: fields
 wysiwyg: true
-preview: gallery
 
 fields:
   gallery:
