@@ -1,6 +1,8 @@
 <?php
 /** @var \Kirby\Cms\Block $block */
 ?>
+
+<?php if ($files->count()) : ?>
 <ul>
 	<?php foreach ($block->files()->toFiles() as $file): ?>
 	<li>
@@ -10,3 +12,4 @@
 	</li>
 	<?php endforeach ?>
 </ul>
+<?php endif ?>
