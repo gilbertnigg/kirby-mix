@@ -23,7 +23,6 @@
 		@apply hidden;
 	}
 	.__accordion summary::after {
-    will-change: transition;
 		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='currentcolor' fill='none' stroke-width='5' viewBox='0 0 100 100'%3E%3Cpath d='M30,96L70,50L30,4'/%3E%3C/svg%3E");
 		mask-size: cover;
 		@apply will-change-[transform];
