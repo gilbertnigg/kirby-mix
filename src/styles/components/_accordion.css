@@ -48,7 +48,6 @@
 	.is-js .__accordion details::details-content {
     block-size: 0;
     transition-behavior: allow-discrete;
-    content-visibility: auto;
 		@apply will-change-[block-size,content-visibility];
 		@apply transition-[block-size,content-visibility] ease-out;
 		@apply overflow-hidden;
