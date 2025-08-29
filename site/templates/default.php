@@ -78,10 +78,10 @@
         <a href="<?= $post->url() ?>" class="block no-underline">
             <?php if ($img = $post->cover()->toFile()) :
 			$thumb = $img->thumb(['width'=>800, 'height'=>600, 'crop'=>true]); ?>
-           <p>
-           	 <img src="<?= $thumb->url() ?>" width="<?= $thumb->width() ?>" height="<?= $thumb->height() ?>"
-	                alt="<?= $img->alt()->or($post->title()) ?>" loading="lazy">
-           </p>
+            <p>
+                <img src="<?= $thumb->url() ?>" width="<?= $thumb->width() ?>" height="<?= $thumb->height() ?>"
+                    alt="<?= $img->alt()->or($post->title()) ?>" loading="lazy">
+            </p>
             <?php endif ?>
             <span class="block">
                 <h3><?= $post->title() ?></h3>
@@ -98,11 +98,13 @@
     <?php if ($page->blocks()->isNotEmpty()) : ?>
     <hr>
     <h2>Blocks</h2>
-    <?php foreach ($page->blocks()->toBlocks() as $block) : ?>
-    <div id="<?= $block->id() ?>" class="__block is-type-<?= $block->type() ?>">
-        <?= $block ?>
+    <div class="__blocks">
+        <?php foreach ($page->blocks()->toBlocks() as $block) : ?>
+        <div id="<?= $block->id() ?>" class="__block is-type-<?= $block->type() ?>">
+            <?= $block ?>
+        </div>
+        <?php endforeach ?>
     </div>
-    <?php endforeach ?>
     <?php endif ?>
 
 </article>

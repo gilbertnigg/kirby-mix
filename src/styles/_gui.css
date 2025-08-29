@@ -65,4 +65,17 @@
   .__grid > * {
     @apply auto-rows-fr;
   }
+
+  /*** Blocks ***/
+  .__block {
+    @apply my-8 md:my-164;
+    @apply first:mt-0;
+    @apply last:mb-0;
+  }
+  .__block.is-type-heading {
+    @apply mb-0 md:mb-0;
+  }
+  .__block.is-type-heading + .__block.is-type-text {
+    @apply mt-0 md:mt-0;
+  }
 }
