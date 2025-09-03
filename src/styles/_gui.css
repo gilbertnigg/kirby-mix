@@ -68,7 +68,7 @@
 
   /*** Blocks ***/
   .__block {
-    @apply my-8 md:my-164;
+    @apply my-8 md:my-16;
     @apply first:mt-0;
     @apply last:mb-0;
   }
