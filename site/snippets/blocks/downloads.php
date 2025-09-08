@@ -6,7 +6,7 @@
 <ul>
 	<?php foreach ($block->files()->toFiles() as $file): ?>
 	<li>
-		<a href="<?= $file->url() ?>" title="<?= $file->filename().' - '.$file->niceSize() ?>" target="_blank" rel="noopener noreferrer">
+		<a href="<?= $file->url() ?>" title="<?= $file->filename().' - '.$file->niceSize() ?>" target="_blank">
 			<?= $file->description()->or($file->name()) ?>
 		</a>
 	</li>
