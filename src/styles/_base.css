@@ -26,11 +26,11 @@
   h2 {
     @apply mb-4;
     @apply font-bold;
-    @apply text-pretty;
+    @apply text-balance;
     @apply text-lg;
   }
   h3 {
-    @apply font-bold;
+    @apply font-balance;
     @apply text-pretty;
   }
   /* Block elements */
