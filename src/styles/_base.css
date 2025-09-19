@@ -30,7 +30,7 @@
     @apply text-lg;
   }
   h3 {
-    @apply font-balance;
+    @apply text-balance;
     @apply text-pretty;
   }
   /* Block elements */
