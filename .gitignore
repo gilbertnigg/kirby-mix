@@ -17,6 +17,10 @@ Icon
 /data/storage/content/*
 /data/storage/languages/*
 !/data/storage/content/home
+# Demo files in git repo
+!/data/storage/content/meta
+!/data/storage/content/news
+!/data/storage/content/projects
 
 # Custom Kirby plugins
 # ------------
