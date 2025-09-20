@@ -21,6 +21,7 @@ Icon
 !/data/storage/content/meta
 !/data/storage/content/news
 !/data/storage/content/projects
+!/data/storage/content/site.txt
 
 # Custom Kirby plugins
 # ------------
