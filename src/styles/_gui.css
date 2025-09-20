@@ -73,9 +73,16 @@
     @apply last:mb-0;
   }
   .__block.is-type-heading {
-    @apply mb-0 md:mb-0;
+    @apply mb-0;
   }
   .__block.is-type-heading + .__block.is-type-text {
-    @apply mt-0 md:mt-0;
+    @apply mt-0;
+  }
+  .__block.is-type-text:has(+ .__block.is-type-downloads) {
+    @apply mb-0;
+  }
+  .__block.is-type-text + .__block.is-type-downloads {
+    @apply mt-0;
+    @apply bg-blue-500;
   }
 }
