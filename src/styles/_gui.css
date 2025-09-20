@@ -83,6 +83,5 @@
   }
   .__block.is-type-text + .__block.is-type-downloads {
     @apply mt-0;
-    @apply bg-blue-500;
   }
 }
