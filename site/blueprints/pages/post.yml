@@ -56,8 +56,7 @@ tabs:
                 required: true
               tags:
                 label: Tags
-                type: tags
-                accept: options
+                type: multiselect
                 columns: 3
                 options:
                   type: query
