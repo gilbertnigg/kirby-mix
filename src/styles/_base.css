@@ -32,6 +32,12 @@
   h3 {
     @apply text-pretty;
   }
+  p + h2,
+  ul + h2,
+  p + h3,
+  ul + h3 {
+    @apply mt-8;
+  }
   /* Block elements */
   article p {
     @apply mb-4;
