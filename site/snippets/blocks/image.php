@@ -1,8 +1,7 @@
 <?php /** @var \Kirby\Cms\Block $block */ ?>
 
-<?php if ($image = $block->image()->toFile()) :
-$img_size = $block->image_size()->value(); ?>
-<div class="is-<?= $img_size ?>">
+<?php if ($image = $block->image()->toFile()) : ?>
+<div>
 	<img
 	srcset="<?= $image->srcset([
 		'800w'  => ['width' => 800, 'format' => 'webp'],
