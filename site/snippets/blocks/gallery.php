@@ -11,3 +11,4 @@
     </a>
     <?php endforeach ?>
     </figure>
+</div>
