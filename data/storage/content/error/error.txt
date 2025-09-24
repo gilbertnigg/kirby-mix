@@ -1,0 +1,5 @@
+Title: Error
+
+----
+
+Text: <p>Die von Ihnen angeforderte Seite kann nicht gefunden werden. Möglicherweise haben Sie einen veralteten Link benutzt, oder Sie haben die Internetadresse (URL) falsch eingegeben. Sie können folgendes versuchen:</p><ul><li>Versuchen Sie, den Link nicht aus Ihren Lesezeichen anzusteuern, sondern direkt über die <a href="/" rel="noopener noreferrer nofollow" style="text-decoration:underline">Homepage</a></li><li>Verwenden Sie die Navigationsleiste, um die gewünschte Seite zu finden.</li><li>Oder überprüfen Sie bitte die URL auf Tippfehler und achten Sie dabei auch auf Satzzeichen.</li></ul><p>Wir entschuldigen uns für allfällige Unannehmlichkeiten!</p>
