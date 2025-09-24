@@ -5,7 +5,7 @@ use Kirby\Toolkit\A;
 /** @var \Kirby\Cms\Block $block */
 ?>
 <?php if ($block->location() == 'web' && $video = Html::video($block->url())) : ?>
-<figure>
+<figure class="block">
     <div class="__aspect is-16x9">
         <?= $video ?>
     </div>
