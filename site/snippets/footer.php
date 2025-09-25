@@ -25,7 +25,7 @@
             </nav>
             <?php endif ?>
             <?php if ($links_footer = $site->children()->template('meta-index')->children()->listed()) : ?>
-            <nav id="nav-meta flex space-x-2">
+            <nav id="nav-meta" class="flex space-x-2">
                 <?php foreach ($links_footer as $link) : ?>
                 <a href="<?= $link->url() ?>" class="<?= e($link === $page, 'is-selected') ?>">
                     <?= $link->title() ?>
