@@ -13,26 +13,24 @@
             <?php if ($site->files()->template('logo-some')->count()) : ?>
             <nav id="nav-some" class="flex space-x-2">
                 <?php foreach ($site->files()->template('logo-some')->sortBy('sort', 'asc', 'filename', 'asc') as $logo_some) : ?>
-				<?php if ($logo_some->weblink()->isNotEmpty()) : ?>
+                <?php if ($logo_some->weblink()->isNotEmpty()) : ?>
                 <a href="<?= $logo_some->weblink() ?>" target="_blank" rel="noopener noreferrer">
-				<?php endif ?>
+                    <?php endif ?>
                     <img src="<?= $logo_some->thumb(['width'=>600, 'height'=>600])->url() ?>" class="w-8"
                         alt="<?= $logo_some->title() ?>" loading="lazy">
-				<?php if ($logo_some->weblink()->isNotEmpty()) : ?>
+                    <?php if ($logo_some->weblink()->isNotEmpty()) : ?>
                 </a>
-				<?php endif ?>
+                <?php endif ?>
                 <?php endforeach ?>
             </nav>
             <?php endif ?>
             <?php if ($links_footer = $site->children()->template('meta-index')->children()->listed()) : ?>
-            <nav id="nav-meta">
-                <ul class="flex space-x-2">
-                    <?php foreach ($links_footer as $link) : ?>
-                    <li class="<?= e($link === $page, 'is-selected') ?>">
-                        <?= $link->title()->link() ?>
-                    </li>
-                    <?php endforeach ?>
-                </ul>
+            <nav id="nav-meta flex space-x-2">
+                <?php foreach ($links_footer as $link) : ?>
+                <a href="<?= $link->url() ?>" class="<?= e($link === $page, 'is-selected') ?>">
+                    <?= $link->title() ?>
+                </a>
+                <?php endforeach ?>
             </nav>
             <?php endif ?>
         </div>
