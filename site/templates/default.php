@@ -6,7 +6,7 @@
 			'800w'  => ['width' => 1000, 'height' => 1000, 'crop'=>true, 'format' => 'webp'],
 			'1600w'  => ['width' => 2400, 'format' => 'webp']])?>" sizes="100vw"
         src="<?= $cover->thumb(['width'=>1400])->url() ?>" class="w-full"
-        alt="<?= $cover->alt()->or($site->title()) ?>">
+        alt="<?= $cover->alt()->or($site->title())->esc() ?>">
     <?php endif ?>
 
     <?php if ($cover = $page->cover()->toFile()) :
@@ -14,7 +14,7 @@
 	$thumb = $cover->thumb(['width' => 2400, 'format' => 'webp']); ?>
     <p>
         <img srcset="<?= $thumb->url() ?>" src="<?= $img->url() ?>" width="<?= $thumb->width() ?>"
-            height="<?= $thumb->height() ?>" alt="<?= $cover->alt()->or($site->title()) ?>">
+            height="<?= $thumb->height() ?>" alt="<?= $cover->alt()->or($site->title())->esc() ?>">
     </p>
     <?php endif ?>
 
@@ -46,7 +46,7 @@
     <div class="__grid is-row">
         <?php foreach ($page->images()->template('image')->sortBy('sort', 'asc', 'filename', 'asc') as $img) : ?>
         <div>
-            <img src="<?= $img->thumb(['width'=>1600])->url() ?>" alt="<?= $img->alt() ?>">
+            <img src="<?= $img->thumb(['width'=>1600])->url() ?>" alt="<?= $img->alt()->esc() ?>">
         </div>
         <?php endforeach ?>
     </div>
@@ -80,7 +80,7 @@
 			$thumb = $img->thumb(['width'=>800, 'height'=>600, 'crop'=>true]); ?>
             <p>
                 <img src="<?= $thumb->url() ?>" width="<?= $thumb->width() ?>" height="<?= $thumb->height() ?>"
-                    alt="<?= $img->alt()->or($post->title()) ?>" loading="lazy">
+                    alt="<?= $img->alt()->or($post->title())->esc() ?>" loading="lazy">
             </p>
             <?php endif ?>
             <span class="block">

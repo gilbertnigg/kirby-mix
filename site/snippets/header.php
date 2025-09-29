@@ -11,7 +11,7 @@
         <div class="__center flex justify-between items-center">
             <a href="<?= $site->url() ?>">
                 <img src="<?= asset('assets/img/logo.svg')->thumb(['width'=>600])->url() ?>" class="inline-block w-48"
-                    alt="<?= $site->title() ?>">
+                    alt="<?= $site->title()->esc() ?>">
             </a>
             <button id="navicon" aria-label="Menu open/close">
                 <span class="is-open">

@@ -10,6 +10,6 @@
 	src="<?= $image->resize(1600)->url() ?>"
 	sizes="(min-width: 1000px) 100vw"
 	width="<?= $image->width() ?>" height="<?= $image->height() ?>"
-	alt="<?= $image->alt() ?>">
+	alt="<?= $image->alt()->esc() ?>">
 </div>
 <?php endif ?>

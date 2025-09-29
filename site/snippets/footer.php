@@ -17,7 +17,7 @@
                 <a href="<?= $logo_some->weblink() ?>" target="_blank" rel="noopener noreferrer">
                     <?php endif ?>
                     <img src="<?= $logo_some->thumb(['width'=>600, 'height'=>600])->url() ?>" class="w-8"
-                        alt="<?= $logo_some->title() ?>" loading="lazy">
+                        alt="<?= $logo_some->title()->esc() ?>" loading="lazy">
                     <?php if ($logo_some->weblink()->isNotEmpty()) : ?>
                 </a>
                 <?php endif ?>

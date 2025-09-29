@@ -7,7 +7,7 @@
 	?>
     <a href="<?= $image->url() ?>" class="inline-block no-underline" target="_blank">
         <img src="<?= $thumb->url() ?>" width="<?= $thumb->width() ?>" height="<?= $thumb->height() ?>"
-            alt="<?= $image->alt() ?>" loading="lazy">
+            alt="<?= $image->alt()->esc() ?>" loading="lazy">
     </a>
     <?php endforeach ?>
     </figure>
