@@ -3,6 +3,7 @@
   #nav-main {
     interpolate-size: allow-keywords;
     transition: opacity 0.2s ease-out, display 0.2s ease-out allow-discrete;
+    @apply will-change-[opacity,display];
     @apply max-md:fixed;
     @apply max-md:z-30;
     @apply max-md:inset-0;
