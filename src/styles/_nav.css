@@ -1,12 +1,24 @@
 @layer components {
   /*** Nav main ***/
   #nav-main {
+    interpolate-size: allow-keywords;
+    transition: opacity 0.2s ease-out, display 0.2s ease-out allow-discrete;
     @apply max-md:fixed;
     @apply max-md:z-30;
     @apply max-md:inset-0;
     @apply max-md:hidden;
-    @apply max-md:bg-white;
+    @apply max-md:opacity-0;
     @apply max-md:p-4;
+    @apply max-md:bg-white;
+  }
+  .is-nav-open #nav-main {
+    @apply max-md:opacity-100;
+    @apply max-md:block;
+  }
+  @starting-style {
+    .is-nav-open #nav-main {
+      @apply opacity-0;
+    }
   }
   #nav-main > ul {
     @apply md:flex;
@@ -57,9 +69,6 @@
   .is-nav-open body {
     @apply bg-blue-50;
     @apply max-md:overflow-hidden;
-  }
-  .is-nav-open #nav-main {
-    @apply max-md:block;
   }
   .is-nav-open #navicon .is-open {
     @apply max-md:hidden;
