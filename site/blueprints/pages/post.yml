@@ -69,7 +69,7 @@ tabs:
                 uploads: file
                 query: page.files.template("file")
                 info: "{{ file.description }}"
-                empty: Kein Bild
+                empty: Keine Downloads
                 image:
                   back: black
 
