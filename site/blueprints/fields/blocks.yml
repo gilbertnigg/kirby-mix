@@ -17,3 +17,5 @@ fieldsets:
       - downloads
       - accordion
       - dialog
+      - map
+      - button

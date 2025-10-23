@@ -1,0 +1,22 @@
+name: Button
+icon: circle-nested
+wysiwyg: true
+preview: fields
+fields:
+  text:
+    label: Text
+    type: text
+    required: true
+    width: 1/3
+  weblink:
+    label: Text
+    type: url
+    required: true
+    width: 1/3
+  target:
+    label: Zielfenster
+    type: toggle
+    width: 1/3
+    text:
+      eigenes Fenster
+      neues Fenster

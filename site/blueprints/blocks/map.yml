@@ -1,0 +1,31 @@
+name: Karte
+icon: pin
+wysiwyg: true
+preview: fields
+fields:
+  query:
+    label: Adresse
+    type: text
+    placeholder: Strasse 1, 12345 Ort
+    width: 1/2
+    required: true
+  zoom:
+    label: Zoom
+    type: number
+    default: 14
+    width: 1/4
+    required: true
+  maptype:
+    label: Typ
+    type: toggles
+    empty: false
+    default: "m"
+    grow: false
+    labels: false
+    width: 1/4
+    required: true
+    options:
+      - value: m
+        text: Strasse
+      - value: k
+        text: Satellit
