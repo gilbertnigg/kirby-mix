@@ -1,1 +1,272 @@
-!function(){var n,e={24:function(){var n=document.getElementById("nav-main"),e=document.getElementById("navicon");e.addEventListener("click",function(n){n.preventDefault(),document.documentElement.classList.toggle("is-nav-open")}),document.addEventListener("keydown",function(n){"Escape"===n.key&&document.documentElement.classList.remove("is-nav-open")}),document.addEventListener("click",function(t){!document.documentElement.classList.contains("is-nav-open")||n.contains(t.target)||e.contains(t.target)||document.documentElement.classList.remove("is-nav-open")})},201:function(){document.querySelectorAll("dialog").forEach(function(n){var e=n.nextElementSibling,t=n.querySelector(".dialog-close");e&&e.addEventListener("click",function(){n.showModal()}),t&&t.addEventListener("click",function(){n.close()}),n.addEventListener("click",function(e){e.target===n&&n.close()})})},276:function(n,e,t){"use strict";t(24),t(201);console.log("hello world")},497:function(){}},t={};function o(n){var r=t[n];if(void 0!==r)return r.exports;var c=t[n]={exports:{}};return e[n](c,c.exports,o),c.exports}o.m=e,n=[],o.O=function(e,t,r,c){if(!t){var i=1/0;for(s=0;s<n.length;s++){t=n[s][0],r=n[s][1],c=n[s][2];for(var u=!0,a=0;a<t.length;a++)(!1&c||i>=c)&&Object.keys(o.O).every(function(n){return o.O[n](t[a])})?t.splice(a--,1):(u=!1,c<i&&(i=c));if(u){n.splice(s--,1);var l=r();void 0!==l&&(e=l)}}return e}c=c||0;for(var s=n.length;s>0&&n[s-1][2]>c;s--)n[s]=n[s-1];n[s]=[t,r,c]},o.n=function(n){var e=n&&n.__esModule?function(){return n.default}:function(){return n};return o.d(e,{a:e}),e},o.d=function(n,e){for(var t in e)o.o(e,t)&&!o.o(n,t)&&Object.defineProperty(n,t,{enumerable:!0,get:e[t]})},o.o=function(n,e){return Object.prototype.hasOwnProperty.call(n,e)},function(){var n={847:0,252:0};o.O.j=function(e){return 0===n[e]};var e=function(e,t){var r,c,i=t[0],u=t[1],a=t[2],l=0;if(i.some(function(e){return 0!==n[e]})){for(r in u)o.o(u,r)&&(o.m[r]=u[r]);if(a)var s=a(o)}for(e&&e(t);l<i.length;l++)c=i[l],o.o(n,c)&&n[c]&&n[c][0](),n[c]=0;return o.O(s)},t=self.webpackChunklaravel_mix_package=self.webpackChunklaravel_mix_package||[];t.forEach(e.bind(null,0)),t.push=e.bind(null,t.push.bind(t))}(),o.O(void 0,[252],function(){return o(276)});var r=o.O(void 0,[252],function(){return o(497)});r=o.O(r)}();
+/******/ (function() { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/scripts/_navicon.js":
+/*!*********************************!*\
+  !*** ./src/scripts/_navicon.js ***!
+  \*********************************/
+/***/ (function() {
+
+var navMain = document.getElementById('nav-main');
+var navicon = document.getElementById('navicon');
+
+// Toggle the navigation menu when the navicon is clicked
+navicon.addEventListener('click', function (e) {
+  e.preventDefault();
+  document.documentElement.classList.toggle('is-nav-open');
+});
+
+// Close the navigation when the Escape key is pressed
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    document.documentElement.classList.remove('is-nav-open');
+  }
+});
+
+// Close the navigation when clicking outside of the navicon
+document.addEventListener('click', function (e) {
+  if (document.documentElement.classList.contains('is-nav-open') && !navMain.contains(e.target) && !navicon.contains(e.target)) {
+    document.documentElement.classList.remove('is-nav-open');
+  }
+});
+
+/***/ }),
+
+/***/ "./src/scripts/app.js":
+/*!****************************!*\
+  !*** ./src/scripts/app.js ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _navicon__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_navicon */ "./src/scripts/_navicon.js");
+/* harmony import */ var _navicon__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_navicon__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_dialog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/_dialog */ "./src/scripts/components/_dialog.js");
+/* harmony import */ var _components_dialog__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_dialog__WEBPACK_IMPORTED_MODULE_1__);
+
+
+console.log('hello world');
+
+/***/ }),
+
+/***/ "./src/scripts/components/_dialog.js":
+/*!*******************************************!*\
+  !*** ./src/scripts/components/_dialog.js ***!
+  \*******************************************/
+/***/ (function() {
+
+var dialogs = document.querySelectorAll('dialog');
+dialogs.forEach(function (dialog) {
+  var showButton = dialog.nextElementSibling;
+  var closeButton = dialog.querySelector('.dialog-close');
+
+  // "Show the dialog" button opens the dialog modally
+  if (showButton) {
+    showButton.addEventListener('click', function () {
+      dialog.showModal();
+    });
+  }
+
+  // "Close" button closes the dialog
+  if (closeButton) {
+    closeButton.addEventListener('click', function () {
+      dialog.close();
+    });
+  }
+
+  // Close the dialog when clicking outside of it
+  // closedby="any" not working in Safari, so we add a click event listener
+  dialog.addEventListener('click', function (event) {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/styles/app.css":
+/*!****************************!*\
+  !*** ./src/styles/app.css ***!
+  \****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	!function() {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = function(result, chunkIds, fn, priority) {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var chunkIds = deferred[i][0];
+/******/ 				var fn = deferred[i][1];
+/******/ 				var priority = deferred[i][2];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every(function(key) { return __webpack_require__.O[key](chunkIds[j]); })) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	!function() {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = function(module) {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				function() { return module['default']; } :
+/******/ 				function() { return module; };
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	!function() {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = function(exports, definition) {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	!function() {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = function(exports) {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	}();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	!function() {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/app": 0,
+/******/ 			"css/app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = function(chunkId) { return installedChunks[chunkId] === 0; };
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = function(parentChunkLoadingFunction, data) {
+/******/ 			var chunkIds = data[0];
+/******/ 			var moreModules = data[1];
+/******/ 			var runtime = data[2];
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some(function(id) { return installedChunks[id] !== 0; })) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunklaravel_mix_package"] = self["webpackChunklaravel_mix_package"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	}();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./src/scripts/app.js"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], function() { return __webpack_require__("./src/styles/app.css"); })
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;

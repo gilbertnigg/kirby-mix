@@ -26,6 +26,32 @@
     @apply md:space-x-4;
   }
 
+  /* Nav dropdown */
+  #nav-main.is-dropdown > ul a {
+    @apply md:block;
+  }
+  #nav-main.is-dropdown > ul > li {
+    @apply md:relative;
+  }
+  #nav-main.is-dropdown > ul > li:hover > ul {
+    @apply md:block;
+  }
+  #nav-main.is-dropdown > ul > li > ul {
+    @apply max-md:block;
+    @apply md:hidden;
+    @apply md:absolute;
+    @apply md:z-0;
+    @apply md:-ml-4;
+    @apply md:p-4;
+    @apply md:whitespace-nowrap;
+    @apply md:bg-white;
+    @apply md:border md:border-primary;
+  }
+  #nav-main.is-dropdown > ul > li > ul > li {
+    @apply md:my-1;
+    @apply md:min-w-full;
+  }
+
 
   /*** Navicon ***/
   #navicon {
@@ -33,7 +59,7 @@
     @apply z-40;
     @apply right-4;
     @apply top-4;
-    @apply hidden;
+    @apply md:hidden;
   }
   #navicon .is-open {
     @apply block;
