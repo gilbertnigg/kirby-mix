@@ -1,5 +1,9 @@
 <?php
 
+// Security headers
+header('X-Content-Type-Options: nosniff');
+header('X-Frame-Options: DENY');
+
 return [
 	'auth' => [
 		'methods' => ['password', 'password-reset']
