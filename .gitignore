@@ -16,8 +16,8 @@ Icon
 # ------------
 /data/storage/content/*
 /data/storage/languages/*
-!/data/storage/content/home
 # Demo files in git repo
+!/data/storage/content/home
 !/data/storage/content/error
 !/data/storage/content/meta
 !/data/storage/content/news
