@@ -6,6 +6,7 @@
 			'800w'  => ['width' => 1000, 'height' => 1000, 'crop'=>true, 'format' => 'webp'],
 			'1600w'  => ['width' => 2400, 'format' => 'webp']])?>" sizes="100vw"
         src="<?= $cover->thumb(['width'=>1400])->url() ?>" class="w-full"
+		width="<?= $cover->width() ?>" height="<?= $cover->height() ?>"
         alt="<?= $cover->alt()->or($site->title())->esc() ?>">
     <?php endif ?>
 
