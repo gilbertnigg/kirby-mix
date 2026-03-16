@@ -5,7 +5,9 @@
 document.documentElement.classList.replace('no-js', 'is-js');
 </script>
 <title><?= seo_title() ?></title>
+<?php if (!$page->isErrorPage()) : ?>
 <link rel="canonical" href="<?= url($page, ['params'=>params()]) ?>">
+<?php endif ?>
 <meta name="description" content="<?= seo_description() ?>">
 <meta property="og:title" content="<?= seo_title() ?>">
 <meta property="og:description" content="<?= seo_description() ?>">
