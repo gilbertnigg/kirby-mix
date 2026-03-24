@@ -2,17 +2,19 @@
 <html lang="<?= language_code() ?>" class="no-js">
 
 <head>
-<?php snippet('head', ['cache'=>1]) ?>
+    <?php snippet('head', ['cache'=>1]) ?>
 </head>
 
 <body class="__tpl-<?= $page->template()->name() ?>">
 
     <header class="fixed z-20 inset-x-0 top-0 pointer-events-none [&>div>*]:pointer-events-auto">
         <div class="__center flex justify-between items-center">
+            <?php if ($logo = asset('assets/img/logo.svg')) : ?>
             <a href="<?= $site->url() ?>">
-                <img src="<?= asset('assets/img/logo.svg')->thumb(['width'=>600])->url() ?>" class="inline-block w-48"
-                    alt="<?= $site->title()->esc() ?>">
+                <img src="<?= $logo->url() ?>" alt="Logo <?= $site->title()->esc() ?>" class="inline-block w-48"
+                    width="<?= $logo->width() ?>" height="<?= $logo->height() ?>">
             </a>
+            <?php endif ?>
             <button id="navicon" aria-label="Menu open/close">
                 <span class="is-open">
                     <svg class="size-6" xmlns="http://www.w3.org/2000/svg" stroke="currentcolor" fill="none"
