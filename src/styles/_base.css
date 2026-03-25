@@ -61,6 +61,7 @@
     @apply my-8;
     @apply border-primary;
   }
+
   /* Inline elements */
   article a {
     @apply underline;

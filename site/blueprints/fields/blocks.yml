@@ -19,3 +19,4 @@ fieldsets:
       - dialog
       - map
       - button
+      - code
