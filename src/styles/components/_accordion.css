@@ -44,14 +44,16 @@
   .__accordion details[open] {
     @apply pb-4;
   }
-  .is-js .__accordion details::details-content {
-    block-size: 0;
-    transition-behavior: allow-discrete;
-    @apply will-change-[block-size,content-visibility];
-    @apply transition-[block-size,content-visibility] ease-out;
-    @apply overflow-hidden;
-  }
-  .is-js .__accordion details[open]::details-content {
-    block-size: auto;
+  @supports (interpolate-size: allow-keywords) {
+	.is-js .__accordion details::details-content {
+      block-size: 0;
+      transition-behavior: allow-discrete;
+      @apply will-change-[block-size,content-visibility];
+      @apply transition-[block-size,content-visibility] ease-out;
+      @apply overflow-hidden;
+    }
+    .is-js .__accordion details[open]::details-content {
+      block-size: auto;
+    }
   }
 }
