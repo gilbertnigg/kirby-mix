@@ -4,7 +4,7 @@ wysiwyg: true
 preview: fields
 fields:
   accordion:
-    label: Inhalte
+    label: false
     type: structure
     columns:
       headline: true
