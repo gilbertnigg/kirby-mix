@@ -5,6 +5,11 @@
 
 @layer base {
   /*** Defaults ***/
+  :root {
+    @supports (interpolate-size: allow-keywords) {
+      interpolate-size: allow-keywords;
+    }
+  }
   body {
     @apply subpixel-antialiased;
     @apply font-sans;
@@ -49,7 +54,7 @@
     @apply mb-4;
   }
   article li p:last-child {
-      @apply mb-0;
+    @apply mb-0;
   }
   article ol {
     @apply list-decimal;
@@ -67,5 +72,4 @@
     @apply underline;
     @apply text-primary;
   }
-
 }
