@@ -1,0 +1,39 @@
+/* Pagination */
+.swiper-pagination-bullets {
+	@apply my-2;
+	@apply text-center;
+}
+.swiper-pagination-bullet {
+	@apply inline-block;
+	@apply cursor-pointer;
+	@apply rounded-full;
+	@apply mx-1;
+	@apply size-3;
+	@apply bg-gray-300;
+}
+.swiper-pagination-bullet-active {
+	@apply bg-primary;
+}
+.swiper-button-disabled {
+	@apply opacity-50;
+}
+
+/* Navigation */
+.swiper-button-prev,
+.swiper-button-next {
+	@apply size-8;
+	@apply absolute z-20 top-1/2;
+	@apply -translate-y-4;
+	@apply cursor-pointer;
+	@apply text-primary;
+	@apply md:size-12;
+	@apply md:-translate-y-6;
+}
+.swiper-button-prev {
+	@apply left-0;
+	@apply md:-left-12;
+}
+.swiper-button-next {
+	@apply right-0;
+	@apply md:-right-12;
+}

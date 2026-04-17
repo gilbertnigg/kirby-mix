@@ -66,6 +66,11 @@
     @apply my-8;
     @apply border-primary;
   }
+  article code {
+    @apply rounded-md;
+    @apply bg-black;
+    @apply text-white;
+  }
 
   /* Inline elements */
   article a {

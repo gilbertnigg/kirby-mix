@@ -1,0 +1,20 @@
+/* purgecss start ignore */
+
+@import "glightbox/dist/css/glightbox.css";
+
+.glightbox-clean .goverlay {
+	@apply bg-black/80;
+}
+.glightbox-clean .gslide-media {
+	@apply shadow-none;
+}
+
+.glightbox-clean button {
+	@apply text-white;
+}
+.glightbox-clean .gprev path,
+.glightbox-clean .gnext path,
+.glightbox-clean .gclose path {
+	@apply fill-current;
+	@apply stroke-current;
+}

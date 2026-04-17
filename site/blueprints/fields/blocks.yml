@@ -20,3 +20,6 @@ fieldsets:
       - map
       - button
       - code
+      - glightbox
+      - swiper
+      - masonry

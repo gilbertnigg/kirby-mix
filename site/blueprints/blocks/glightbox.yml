@@ -1,12 +1,16 @@
-name: Bildergalerie
-icon: images
-preview: fields
+name: Lightbox Galerie
+icon: dashboard
 wysiwyg: true
-
+preview: fields
 fields:
   blockimages:
     label: field.blocks.gallery.images.label
     type: files
+    multiple: true
     empty: field.blocks.gallery.images.empty
+    info: "{{ file.alt }}"
     uploads: image
     query: page.files.template("image")
+    image:
+      ratio: 8/6
+      back: black

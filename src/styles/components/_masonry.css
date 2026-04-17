@@ -1,0 +1,23 @@
+/*
+  The components layer is for class-based styles
+  that you want to be able to override with utilities.
+*/
+@layer components {
+	:root {
+		--masonry-gutter: 1.5rem;
+	}
+	.masonry-gutter-sizer {
+		@apply w-[--masonry-gutter];
+	}
+	.masonry-item {
+		@apply mb-[--masonry-gutter];
+	}
+	/* fluid 1 sm:2 md:3 cols */
+	.masonry-sizer,
+	.masonry-item {
+		@apply w-full;
+		@apply sm:w-[calc(50%-0.75rem)]; /* [100 / cols], --masonry-gutter / cols * [cols-1] */
+		@apply md:w-[calc(33.333333%-1rem)]; /* [100 / cols], --masonry-gutter / cols * [cols-1] */
+		@apply xl:w-[calc(25%-1.125rem)]; /* [100 / cols], --masonry-gutter / cols * [cols-1] */
+	}
+}
