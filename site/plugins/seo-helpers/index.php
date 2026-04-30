@@ -9,7 +9,7 @@ function seo_title() {
 		if (page()->isHomePage()) {
 			$seo_title = $site_title;
 		} else {
-			$seo_title = $site_title.' - '.page()->seo_title()->or(page()->title());
+			$seo_title = page()->seo_title()->or(page()->title()) . ' - ' . $site_title;
 		}
 	}
 	return Str::unhtml($seo_title);
