@@ -77,4 +77,10 @@
     @apply underline;
     @apply text-primary;
   }
+  article a[href^='tel:'] {
+    @apply no-underline;
+  }
+  article a[href^='mailto:'] {
+    @apply no-underline;
+  }
 }
