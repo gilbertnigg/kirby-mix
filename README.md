@@ -1,13 +1,6 @@
 # Kirby-Mix
 ## Boilerplate for Kirby CMS &amp; Laravel Mix &amp; Tailwind CSS
 
----
-# *Laravel-mix is deprecated*
-# *Install ony with npm ci. No updates provided.*
-# *Soon we will move to vitejs.*
----
-
-
 
 ### Install backend
 - [Kirby 5x](https://getkirby.com)
@@ -22,7 +15,7 @@ composer install
 - [Tailwind CSS 3x](https://tailwindcss.com )
 
 ```
-npm ci
+npm i
 ```
 
 Rename and config `.env`
@@ -40,4 +33,4 @@ npm run prod
 ```
 
 ---
-© [Gilbert Nigg](http://www.gilles.ch) 2025
+© [Gilbert Nigg](http://www.gilles.ch) 2026
