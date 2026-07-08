@@ -1,4 +1,9 @@
-<?php snippet('header') ?>
+<?php
+/**
+ * @var \Kirby\Cms\Page $page
+ * @var \Kirby\Cms\Site $site
+ */
+snippet('header') ?>
 
 <article class="__center">
     <?php if ($cover = $page->images()->template('cover')->first()) : ?>
