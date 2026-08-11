@@ -8,6 +8,13 @@ return [
 	'auth' => [
 		'methods' => ['password', 'password-reset']
 	],
+	'content' => [
+		'salt' => 'my-secret-salt'
+	],
+	'cookie' => [
+		'key' => 'my-secret-key',
+	],
+    'panel.vue.compiler' => false,
 	'cache' => [
 		'pages' => [
 			'active' =>  false
