@@ -50,7 +50,7 @@ snippet('header') ?>
     <hr>
     <h2>Images</h2>
     <div class="__grid is-row">
-        <?php foreach ($page->images()->template('image')->sortBy('sort', 'asc', 'filename', 'asc') as $img) : ?>
+        <?php foreach ($page->images()->template('image') as $img) : ?>
         <div>
             <img src="<?= $img->thumb(['width'=>1600])->url() ?>" alt="<?= $img->alt()->esc() ?>">
         </div>
@@ -63,7 +63,7 @@ snippet('header') ?>
     <hr>
     <h2>Files</h2>
     <ul>
-        <?php foreach ($page->files()->template('file')->sortBy('sort', 'asc', 'filename', 'asc') as $file) : ?>
+        <?php foreach ($page->files()->template('file') /*->sortBy('sort', 'asc', 'filename', 'asc')*/ as $file) : ?>
         <li>
             <a href="<?= $file->url() ?>" target="_blank" rel="noopener noreferrer">
                 <?= $file->description()->or($file->name()) ?>
