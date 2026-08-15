@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \Kirby\Cms\Page $page
+ * @var \Kirby\Cms\Site $site
+ */
+?>
 </main>
 
 <footer class="py-8 mt-16 bg-primary">
@@ -27,7 +33,7 @@
             <?php if ($links_footer = $site->children()->template('meta-index')->children()->listed()) : ?>
             <nav id="nav-meta" class="flex space-x-2">
                 <?php foreach ($links_footer as $link) : ?>
-                <a href="<?= $link->url() ?>" class="<?= e($link === $page, 'is-selected') ?>">
+                <a href="<?= $link->url() ?>" class="<?= $link === $page ? 'is-selected' : '' ?>">
                     <?= $link->title() ?>
                 </a>
                 <?php endforeach ?>
