@@ -5,4 +5,7 @@ import "./components/_glightbox";
 import "./components/_masonry";
 import "./components/_swiper";
 
-console.log('hello world');
+window.addEventListener("load", () => {
+  document.documentElement.classList.add("is-loaded");
+  console.log('hello world');
+});
