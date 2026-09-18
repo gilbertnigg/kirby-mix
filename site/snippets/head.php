@@ -1,5 +1,6 @@
 <?php
 /**
+ * @var Kirby\Cms\Site $site
  * @var Kirby\Cms\Page $page
  * @var int $cache
  */
@@ -10,7 +11,9 @@
 document.documentElement.classList.replace('no-js', 'is-js');
 </script>
 <title><?= seo_title() ?></title>
-<?php if (!$page->isErrorPage()) : ?>
+<?php if ($page->isHomePage()) : ?>
+<link rel="canonical" href="<?= $site->url() ?>">
+<?php elseif (!$page->isErrorPage()) : ?>
 <link rel="canonical" href="<?= url($page, ['params'=>params()]) ?>">
 <?php endif ?>
 <meta name="description" content="<?= seo_description() ?>">
