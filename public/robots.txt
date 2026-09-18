@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Kirby admin and internal public paths
+Disallow: /admin/
+Disallow: /api/
+
+# Internal public files
+Disallow: /index.php
+Disallow: /media/panel/
