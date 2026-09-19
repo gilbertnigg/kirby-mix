@@ -10,16 +10,11 @@
 <script>
 document.documentElement.classList.replace('no-js', 'is-js');
 </script>
-<title><?= seo_title() ?></title>
-<?php if ($page->isHomePage()) : ?>
-<link rel="canonical" href="<?= $site->url() ?>">
-<?php elseif (!$page->isErrorPage()) : ?>
-<link rel="canonical" href="<?= url($page, ['params'=>params()]) ?>">
-<?php endif ?>
+<link rel="canonical" href="<?= seo_url() ?>">
 <meta name="description" content="<?= seo_description() ?>">
 <meta property="og:title" content="<?= seo_title() ?>">
 <meta property="og:description" content="<?= seo_description() ?>">
-<meta property="og:url" content="<?= url($page, ['params'=>params()]) ?>">
+<meta property="og:url" content="<?= seo_url() ?>">
 <meta property="og:type" content="website">
 
 <?php if (seo_icon()) : ?>

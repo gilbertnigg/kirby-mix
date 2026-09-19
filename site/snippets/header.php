@@ -7,7 +7,7 @@
 <html lang="<?= language_code() ?>" class="no-js">
 
 <head>
-    <?php snippet('head', ['cache'=>1]) ?>
+<?php snippet('head', ['cache'=>1]) ?>
 </head>
 
 <body class="__tpl-<?= $page->template()->name() ?>">

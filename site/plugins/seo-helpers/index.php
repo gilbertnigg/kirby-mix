@@ -35,6 +35,17 @@ function seo_image() {
 	return $seo_image;
 }
 
+function seo_url() {
+	if (page()->isHomePage()) {
+		$seo_url = site()->url();
+	} else if (page()->isErrorPage()) {
+		$seo_url = page('error')->url();
+	} else {
+		$seo_url = url(page(), ['params'=>params()]);
+	}
+	return $seo_url;
+}
+
 function language_code($lang = 'de') {
 	if (kirby()->language() && kirby()->language()->code()) {
 		$language_code = kirby()->language()->code();
