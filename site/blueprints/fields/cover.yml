@@ -3,6 +3,7 @@ type: files
 multiple: false
 info: "{{ file.alt }}"
 max: 1
+sortable: false
 uploads: image
 query: page.files.template("image")
 layout: cards
