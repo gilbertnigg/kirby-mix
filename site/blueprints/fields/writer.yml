@@ -5,7 +5,6 @@ headings:
 nodes:
   - heading
   - bulletList
-  - orderedList
 toolbar:
   inline: false
   marks:
