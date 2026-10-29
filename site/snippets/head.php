@@ -10,6 +10,7 @@
 <script>
 document.documentElement.classList.replace('no-js', 'is-js');
 </script>
+<title><?= seo_title() ?></title>
 <link rel="canonical" href="<?= seo_url() ?>">
 <meta name="description" content="<?= seo_description() ?>">
 <meta property="og:title" content="<?= seo_title() ?>">
